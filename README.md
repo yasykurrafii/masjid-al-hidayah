@@ -15,3 +15,6 @@ melalui command prompt
 
 ## Pembuatan Template
 untuk membuat template dapat di ikuti dengan contoh pada index.html dan contoh.html pada folder template
+
+## Pembuatan App
+untuk back-end semua dilakukan pada folder appmasjid dan tidak ada yang dilakukan pada folder lain
