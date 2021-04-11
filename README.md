@@ -14,4 +14,4 @@ manage.py runserver
 melalui command prompt
 
 ## Pembuatan Template
-untuk membuat template dapat di ikuti dengan contoh pada index.html dan contoh.html
+untuk membuat template dapat di ikuti dengan contoh pada index.html dan contoh.html pada folder template
