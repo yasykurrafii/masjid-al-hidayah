@@ -14,7 +14,7 @@ manage.py runserver
 melalui command prompt
 
 ## Pembuatan Template
-untuk membuat template dapat di ikuti dengan contoh pada index.html dan contoh.html pada folder template
+untuk membuat template dapat di ikuti dengan contoh pada base.html dan content.html pada folder template dan untuk CSS nya dapat diubah di file static css
 
 ## Pembuatan App
 untuk back-end semua dilakukan pada folder appmasjid dan tidak ada yang dilakukan pada folder lain
