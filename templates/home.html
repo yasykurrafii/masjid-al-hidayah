@@ -1,54 +1,95 @@
-{% include 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% load static %}
 <!-- Konten utama dari sini ya-->
-
+{% block content %}
 <!-- Slide 1 -->
 <div class="row vertical-center beranda1">
-    <div class="text-center col-sm-12">
-        <h1 style="color: whitesmoke;">Masjid Al-Hidayah</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros vitae<br> erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel leo <br> dignissim, in dictum orci posuere. Vestibulum sollicitudin arcu eget elit<br> cursus
-            lobortis. Morbi tristique dapibus tincidunt. Donec elit arcu, viverra s</p>
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="col-sm-12">
-                    <div class="card" style="height: auto;">
-                        <div class="card-horizontal">
-                            <div class="img-square-wrapper" style="margin-top: 20px; margin-right: 10px;">
-                                <img class="card-gambar" src="../asset/location.png" alt="Card image cap">
-                            </div>
-                            <div class="card-body" style="text-align: left;">
-                                <h4 class="card-title">Masjid Al-Hidayah</h4>
-                                <p class="card-text" style="text-align: left; background: none; color: #000000; font-size: 15px;">
-                                    Jln. Raya Ciherang <br>Perumahan Purnawirawan Kopassus Pelita 1<br> Sukatani Tapos Depok
-                                </p>
-                            </div>
-                            <div class="img-square-wrapper" style="margin-top: 20px; margin-right: 10px;">
-                                <img class="card-gambar" src="../asset/phone.png" alt="Card image cap">
-                            </div>
-                            <div class="card-body" style="text-align: left; font-size: 15px;">
-                                <h4 class="card-title">Pusat Informasi</h4>
-                                <p class="card-text" style="text-align: left; background: none; color: #000000; font-size: 15px;">08XXXXXXXXXXX <br> (0341) XXXXXX </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+  <div class="text-center col-sm-12">
+    <h1 style="color: whitesmoke">Masjid Al-Hidayah</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros
+      vitae<br />
+      erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel
+      leo <br />
+      dignissim, in dictum orci posuere. Vestibulum sollicitudin arcu eget
+      elit<br />
+      cursus lobortis. Morbi tristique dapibus tincidunt. Donec elit arcu,
+      viverra s
+    </p>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-sm-12">
+          <div class="card" style="height: auto">
+            <div class="card-horizontal">
+              <div
+                class="img-square-wrapper"
+                style="margin-top: 20px; margin-right: 10px"
+              >
+                <img
+                  class="card-gambar"
+                  src="{% static 'img/location.png' %}"
+                  alt="Card image cap"
+                />
+              </div>
+              <div class="card-body" style="text-align: left">
+                <h4 class="card-title">Masjid Al-Hidayah</h4>
+                <p
+                  class="card-text"
+                  style="
+                    text-align: left;
+                    background: none;
+                    color: #000000;
+                    font-size: 15px;
+                  "
+                >
+                  Jln. Raya Ciherang <br />Perumahan Purnawirawan Kopassus
+                  Pelita 1<br />
+                  Sukatani Tapos Depok
+                </p>
+              </div>
+              <div
+                class="img-square-wrapper"
+                style="margin-top: 20px; margin-right: 10px"
+              >
+                <img
+                  class="card-gambar"
+                  src="{% static 'img/phone.png' %}"
+                  alt="Card image cap"
+                />
+              </div>
+              <div class="card-body" style="text-align: left; font-size: 15px">
+                <h4 class="card-title">Pusat Informasi</h4>
+                <p
+                  class="card-text"
+                  style="
+                    text-align: left;
+                    background: none;
+                    color: #000000;
+                    font-size: 15px;
+                  "
+                >
+                  08XXXXXXXXXXX <br />
+                  (0341) XXXXXX
+                </p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <!-- Slide 1 -->
 
-
 <!-- Slide 2 -->
-<div class=" row vertical-center beranda2 ">
-    <h1>tes</h1>
-    <h1>tes</h1>
-    <h1>tes</h1>
-    <h1>tes</h1>
-    <h1>tes</h1>
-    <h1>tes</h1>
-    <h1>tes</h1>
-    <h1>tes</h1>
+<div class="row vertical-center beranda2">
+  <h1>tes</h1>
+  <h1>tes</h1>
+  <h1>tes</h1>
+  <h1>tes</h1>
+  <h1>tes</h1>
+  <h1>tes</h1>
+  <h1>tes</h1>
+  <h1>tes</h1>
 </div>
 <!-- Slide 2 -->
 {% endblock content %}
