@@ -45,7 +45,7 @@
                   background-color: #007320;
                   border: none;
                 " colspan="2 ">
-                                Senin, 12 April 2021
+                                {{date}}
                             </td>
                             <tr style="border-bottom: none">
                                 <th style="text-align: center; background-color: white" scope="col ">
@@ -166,7 +166,7 @@
     function classToggle() {
         const navs = document.querySelectorAll('.Navbar__Items')
 
-        navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+        navs.forEach((nav) => nav.classList.toggle('Navbar__ToggleShow'));
     }
 
     document.querySelector('.Navbar__Link-toggle')
