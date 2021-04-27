@@ -109,48 +109,25 @@
                 </div>
                 <br>
 
-
-                <!-- Ini awal cards pertama yang 10 maret Penyebab Munculnya Akhlak Yang Buruk-->
+                
+                {% for data in jadwal%}
+                    <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
                 <div class="card shadow p-3">
                     <div class="row">
                         <div class="col" style="text-align: center; margin-left: -200px;">
-                            <h1 class="card-title">10</h1>
-                            <h3 class="card-title">Maret</h3>
+                            <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
+                            <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
                         </div>
                         <div class="col pembatasSlide3card " style="margin-left: -200px; "></div>
                         <div class="col" style="margin-left: -550px;">
-                            <h5 class="card-title" style="color: #007320;">PENYEBAB MUNCULNYA AKHLAK YANG BURUK</h5>
-                            <h5 class="card-title">Ustadz Ali Nur</h5>
+                            <h5 class="card-title" style="color: #007320;">{{data.title}}</h5>
+                            {% if data.online%}
+                                <a class="btn btn-primary " style="background-color: #FCC740; color:black; border: none; font-size: 10px; ">KAJIAN ONLINE</a>
+                            {% endif %}
+                            <h5 class="card-title">{{data.penceramah}}</h5>
                             <div class="row" style="color: #888888;">
                                 <i class="fas fa-clock"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none;">16:00-17:00<br></a>
-                            </div>
-                            <div class="row" style="color: #888888;">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none;">Masjid Al-Hidayah</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Ini akhir cards pertama yang 10 maret Penyebab Munculnya Akhlak Yang Buruk-->
-                <br>
-
-
-                <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
-                <div class="card shadow p-3">
-                    <div class="row">
-                        <div class="col" style="text-align: center; margin-left: -200px;">
-                            <h1 class="card-title">10</h1>
-                            <h3 class="card-title">Maret</h3>
-                        </div>
-                        <div class="col pembatasSlide3card " style="margin-left: -200px; "></div>
-                        <div class="col" style="margin-left: -550px;">
-                            <h5 class="card-title" style="color: #007320;">ADAB DUDUK DAN BERMAJELIS</h5>
-                            <a class="btn btn-primary " style="background-color: #FCC740; color:black; border: none; font-size: 10px; ">KAJIAN ONLINE</a>
-                            <h5 class="card-title">Ustadz Ali Nur</h5>
-                            <div class="row" style="color: #888888;">
-                                <i class="fas fa-clock"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none;">16:00-17:00<br></a>
+                                <a class="card-text" style="color: #888888; text-decoration: none;">{{data.tanggal|date:"H:i"}}-17:00<br></a>
                             </div>
                             <div class="row" style="color: #888888;">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -161,57 +138,7 @@
                 </div>
                 <!-- Ini akhir cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
                 <br>
-
-                <!-- Ini awal cards ketiga yang 11 maret Memahami Tauhid-->
-                <div class="card shadow p-3">
-                    <div class="row">
-                        <div class="col" style="text-align: center; margin-left: -200px;">
-                            <h1>11</h1>
-                            <h3>Maret</h3>
-                        </div>
-                        <div class="col pembatasSlide3card " style="margin-left: -200px; "></div>
-                        <div class="col" style="margin-left: -550px;">
-                            <h5 class="card-title" style="color: #007320;">MEMAHAMI TAUHID</h5>
-                            <a class="btn btn-primary " style="background-color: #FCC740; color:black; border: none; font-size: 10px; ">KAJIAN ONLINE</a>
-                            <h5 class="card-title">Ustadz Ali Nur</h5>
-                            <div class="row" style="color: #888888;">
-                                <i class="fas fa-clock"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none;">16:00-17:00<br></a>
-                            </div>
-                            <div class="row" style="color: #888888;">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none;">Masjid Al-Hidayah</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Ini akhir cards ketiga yang 11 maret Memahami Tauhid-->
-                <br>
-
-
-                <!-- Ini awal cards keempat yang 11 maret Keajaiban Shalat-->
-                <div class="card shadow p-3">
-                    <div class="row">
-                        <div class="col" style="text-align: center; margin-left: -200px;">
-                            <h1>11</h1>
-                            <h3>Maret</h3>
-                        </div>
-                        <div class="col pembatasSlide3card " style="margin-left: -200px; "></div>
-                        <div class="col" style="margin-left: -550px;">
-                            <h5 class="card-title" style="color: #007320;">KEAJAIBAN SHALAT</h5>
-                            <h5 class="card-title">Ustadz Ali Nur</h5>
-                            <div class="row" style="color: #888888;">
-                                <i class="fas fa-clock"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none;">16:00-17:00<br></a>
-                            </div>
-                            <div class="row" style="color: #888888;">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none;">Masjid Al-Hidayah</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Ini akhir cards keempat yang 11 maret Keajaiban Shalat-->
+                {% endfor %}
                 <br>
 
                 <br>
