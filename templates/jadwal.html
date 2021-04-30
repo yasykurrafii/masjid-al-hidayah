@@ -1,25 +1,19 @@
 {% extends 'base.html' %} {% block content %}
 <div class="containter-fluid beranda3" style="padding-top: 50px">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <h1 style="font-size: 50px">
-          <strong>Jadwal</strong>
-        </h1>
-        <br />
-        <br />
-        <div
-          class="col"
-          style="
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <h1 style="font-size: 50px">
+                    <strong>Jadwal</strong>
+                </h1>
+                <br />
+                <br />
+                <div class="col" style="
             box-shadow: 4px 5px #e5e5e5;
             background-color: #007320;
             border: none;
-          "
-        >
-          <a
-            class="btn btn-primary"
-            style="background-color: #007320; border: none"
-            >Jadwal Kajian</a
+          ">
+                    <a class="btn btn-primary" style="background-color: #007320; border: none">Jadwal Kajian</a
           >
         </div>
         <div class="col" style="padding-top: 7px; border-bottom: solid #e5e5e5">
@@ -43,34 +37,26 @@
               "
               >Kajian Pekan ini <br
             /></a>
-          </div>
-        </div>
-        <br />
-
-        {% for data in jadwal%}
-        <!-- For loop buat nampilin data dari database-->
-        <div class="card shadow p-3">
-          <div class="row">
-            <div class="col" style="text-align: center; margin-left: -200px">
-              <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
-              <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
+                </div>
             </div>
-            <div
-              class="col pembatasSlide3card"
-              style="margin-left: -200px"
-            ></div>
-            <div class="col" style="margin-left: -550px">
-              <h5 class="card-title" style="color: #007320">{{data.title}}</h5>
-              {% if data.online%}
-              <a
-                class="btn btn-primary"
-                style="
+            <br /> {% for data in jadwal%}
+            <!-- For loop buat nampilin data dari database-->
+            <div class="card shadow p-3">
+                <div class="row">
+                    <div class="col" style="text-align: center; margin-left: -200px">
+                        <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
+                        <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
+                    </div>
+                    <div class="col pembatasSlide3card" style="margin-left: -200px"></div>
+                    <div class="col" style="margin-left: -550px">
+                        <h5 class="card-title" style="color: #007320">{{data.title}}</h5>
+                        {% if data.online%}
+                        <a class="btn btn-primary" style="
                   background-color: #fcc740;
                   color: black;
                   border: none;
                   font-size: 10px;
-                "
-                >KAJIAN ONLINE</a
+                ">KAJIAN ONLINE</a
               >
               {% endif %}
               <h5 class="card-title">{{data.penceramah}}</h5>
@@ -81,13 +67,10 @@
                   style="color: #888888; text-decoration: none"
                   >{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}<br
                 /></a>
-              </div>
-              <div class="row" style="color: #888888">
-                <i class="fas fa-map-marker-alt"></i>
-                <a
-                  class="card-text"
-                  style="color: #888888; text-decoration: none"
-                  >Masjid Al-Hidayah</a
+                    </div>
+                    <div class="row" style="color: #888888">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a class="card-text" style="color: #888888; text-decoration: none">Masjid Al-Hidayah</a
                 >
               </div>
             </div>
@@ -106,34 +89,26 @@
                 "
                 >Kajian Sudah Lewat <br
               /></a>
-            </div>
-          </div>
-          <br />
-  
-          {% for data in jadwalLewat%}
-          <!-- For loop buat nampilin data dari database-->
-          <div class="card shadow p-3">
-            <div class="row">
-              <div class="col" style="text-align: center; margin-left: -200px;">
-                <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
-                <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
-              </div>
-              <div
-                class="col pembatasSlide3card"
-                style="margin-left: -200px"
-              ></div>
-              <div class="col" style="margin-left: -550px">
-                <h5 class="card-title" style="color: #007320">{{data.title}}</h5>
-                {% if data.online%}
-                <a
-                  class="btn btn-primary"
-                  style="
+                    </div>
+                </div>
+                <br /> {% for data in jadwalLewat%}
+                <!-- For loop buat nampilin data dari database-->
+                <div class="card shadow p-3" style="background-color: #e5e5e5;">
+                    <div class="row">
+                        <div class="col" style="text-align: center; margin-left: -200px;">
+                            <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
+                            <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
+                        </div>
+                        <div class="col pembatasSlide3card" style="margin-left: -200px"></div>
+                        <div class="col" style="margin-left: -550px">
+                            <h5 class="card-title" style="color: #676666">{{data.title}}</h5>
+                            {% if data.online%}
+                            <a class="btn btn-primary" style="
                     background-color: #fcc740;
                     color: black;
                     border: none;
                     font-size: 10px;
-                  "
-                  >KAJIAN ONLINE</a
+                  ">KAJIAN ONLINE</a
                 >
                 {% endif %}
                 <h5 class="card-title">{{data.penceramah}}</h5>
@@ -144,13 +119,10 @@
                     style="color: #888888; text-decoration: none"
                     >{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}<br
                   /></a>
-                </div>
-                <div class="row" style="color: #888888">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <a
-                    class="card-text"
-                    style="color: #888888; text-decoration: none"
-                    >Masjid Al-Hidayah</a
+                        </div>
+                        <div class="row" style="color: #888888">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a class="card-text" style="color: #888888; text-decoration: none">Masjid Al-Hidayah</a
                   >
                 </div>
               </div>
