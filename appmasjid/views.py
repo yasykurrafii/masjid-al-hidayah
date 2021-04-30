@@ -7,7 +7,7 @@ from .models import *
 
 # Global Variable untuk date
 date = datetime.datetime.now()
-date = date.strftime("%A, %d %B %Y")
+now = date.strftime("%A, %d %B %Y")
 
 # Function untuk fetching api
 
@@ -25,8 +25,8 @@ def fetch_solat():
 def index(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
-    jadwal = JadwalModel.objects.all()
-    return render(request, 'home.html', {'date': date,
+    jadwal = JadwalModel.objects.all()[:5]
+    return render(request, 'home.html', {'date': now,
                                          'jadwal': jadwal,
                                          'subuh': solat['Fajr'],
                                          'dzuhur': solat['Dhuhr'],
@@ -38,17 +38,29 @@ def index(request):
 def jadwal(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
-    return render(request, 'jadwal.html', {'date': date, 'subuh': solat['Fajr'],
+    bulanIni = datetime.date(date.year, date.month, date.day)
+    if int(date.month) == 12:
+        bulanDepan = datetime.date(
+            int(date.year) + 1, (int(date.month) % 12) + 1, date.day)
+    else:
+        bulanDepan = datetime.date(date.year, int(date.month) + 1, date.day)
+    dateLalu = datetime.date(date.year, 1,1)
+    jadwalBulanIni = JadwalModel.objects.filter(
+        tanggal__range=[bulanIni, bulanDepan]).order_by('-tanggal')
+    jadwalLewat = JadwalModel.objects.filter(tanggal__range=[dateLalu,bulanIni])[:5]
+    return render(request, 'jadwal.html', {'date': now, 'subuh': solat['Fajr'],
                                            'dzuhur': solat['Dhuhr'],
                                            'ashr': solat['Asr'],
                                            'maghrib': solat['Maghrib'],
-                                           'isya': solat['Isha']})
+                                           'isya': solat['Isha'],
+                                           'jadwal': jadwalBulanIni,
+                                           'jadwalLewat':jadwalLewat})
 
 
 def laporan(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
-    return render(request, 'laporan.html', {'date': date, 'subuh': solat['Fajr'],
+    return render(request, 'laporan.html', {'date': now, 'subuh': solat['Fajr'],
                                             'dzuhur': solat['Dhuhr'],
                                             'ashr': solat['Asr'],
                                             'maghrib': solat['Maghrib'],
@@ -58,7 +70,7 @@ def laporan(request):
 def informasi(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
-    return render(request, 'informasi.html', {'date': date, 'subuh': solat['Fajr'],
+    return render(request, 'informasi.html', {'date': now, 'subuh': solat['Fajr'],
                                               'dzuhur': solat['Dhuhr'],
                                               'ashr': solat['Asr'],
                                               'maghrib': solat['Maghrib'],
