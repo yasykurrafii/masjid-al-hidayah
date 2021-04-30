@@ -107,11 +107,8 @@
 
                     </div>
                 </div>
-                <br>
-
-                
-                {% for data in jadwal%}
-                    <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
+                <br> {% for data in jadwal%}
+                <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
                 <div class="card shadow p-3">
                     <div class="row">
                         <div class="col" style="text-align: center; margin-left: -200px;">
@@ -122,8 +119,7 @@
                         <div class="col" style="margin-left: -550px;">
                             <h5 class="card-title" style="color: #007320;">{{data.title}}</h5>
                             {% if data.online%}
-                                <a class="btn btn-primary " style="background-color: #FCC740; color:black; border: none; font-size: 10px; ">KAJIAN ONLINE</a>
-                            {% endif %}
+                            <a class="btn btn-primary " style="background-color: #FCC740; color:black; border: none; font-size: 10px; ">KAJIAN ONLINE</a> {% endif %}
                             <h5 class="card-title">{{data.penceramah}}</h5>
                             <div class="row" style="color: #888888;">
                                 <i class="fas fa-clock"></i>
@@ -137,8 +133,7 @@
                     </div>
                 </div>
                 <!-- Ini akhir cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
-                <br>
-                {% endfor %}
+                <br> {% endfor %}
                 <br>
 
                 <br>
@@ -223,4 +218,101 @@
     <!-- Slide 4 -->
 
 
-    {% endblock content %}
+    <!-- Slide 5-->
+    <div class="containter-fluid beranda3" style="padding-top: 50px; background-color: #f5f5f5;">
+        <div class="container">
+
+            <!-- Judul kegiatan -->
+            <div class="row">
+                <div class="col-md-2">
+                    <h1 style="font-size: 50px;">
+                        <strong>Kegiatan</strong>
+                    </h1>
+
+                </div>
+                <div class="col-md-1 pembatasSlide3 " style="margin-left: 50px; "></div>
+                <div class="col-md-8 ">
+                    <h2 style="font-family: Playfair Display;font-style: normal;font-weight: normal;font-size: 30px;line-height: 40px;"> Galeri dan dokumentasi <br>kegiatan Masjid Al-Hidayah</h2>
+                    <br>
+                </div>
+            </div>
+            <!-- Judul kegiatan -->
+
+
+            <!--row gambar kegiatan yang bisa di hover-->
+            <div class="row align-items-center">
+                <!--Kegiatan 1-->
+                <div class="card bg-transparent" style="width: 22rem; border: none;">
+                    <img src="../static/img/fotoSlide5Qurban.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
+                            <strong>Kurban</strong></a>
+                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
+                    </div>
+                </div>
+                <!--Kegiatan 1-->
+
+                <!--Kegiatan 2-->
+                <div class="card bg-transparent" style="width: 22rem; border: none;">
+                    <img src="../static/img/fotoSlide5Tarawih.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
+                            <strong>Tarawih</strong></a>
+                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
+
+
+
+                    </div>
+                </div>
+                <!--Kegiatan 2-->
+
+                <!--Kegiatan 3-->
+                <div class="card bg-transparent" style="width: 22rem; border: none;">
+                    <img src="../static/img/fotoSlide5Jumatan.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
+                            <strong>Jumatan</strong></a>
+                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
+
+                    </div>
+                </div>
+                <!--Kegiatan 3-->
+
+                <!--Kegiatan 4-->
+                <div class="card bg-transparent" style="width: 22rem; border: none;">
+                    <img src="../static/img/fotoSlide5Kajian.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
+                            <strong>Kajian</strong></a>
+                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
+
+
+                    </div>
+                </div>
+                <!--Kegiatan 4-->
+
+                <!--Kegiatan 5-->
+                <div class="card bg-transparent" style="width: 22rem; border: none;">
+                    <img src="../static/img/fotoSlide5TPQ.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
+                            <strong>TPQ</strong></a>
+                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
+
+
+                    </div>
+                </div>
+                <!--Kegiatan 5-->
+            </div>
+            <!--row gambar kegiatan yang bisa di hover-->
+
+
+        </div>
+
+
+        <!-- Slide 5-->
+
+        {% endblock content %}
