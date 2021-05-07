@@ -155,6 +155,55 @@ tr {
 }
 
 
+/* Ini buat Laporan */
+.laporan-tab .active{
+    border-bottom: 8px solid #FCC740 !important;
+}
+
+.laporan-tab .nav-item{
+    border-bottom: solid white 3px;
+}
+
+.laporan-tab .link{
+    color: #ffffff;
+}
+
+.laporan-tab .active .link{
+    color: #FCC740;
+}
+
+.laporan-tab .nav-tabs .nav-link:hover{
+    border: none !important;
+}
+
+.laporan-tab .nav-tabs{
+    border-bottom:none !important;
+}
+
+.detail-laporan .content{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* css untuk jadwal */
+.beranda3 ul{
+    width: 276px;
+    border-top: 1px solid #dee2e6;
+}
+
+.beranda3 ul .active a{
+    background-color:#007320 !important;
+    color: #ffffff !important;
+    border-radius: 0;
+    border:none !important;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.beranda3 ul .nav-link{
+    background-color:#ffffff ;
+    color:#303030;
+}
+
 /* Ini css buatfooter */
 
 ul {
@@ -232,10 +281,6 @@ hr {
 }
 
 .tab {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-bottom: solid white 3px;
     font-size: 22px;
     line-height: 28px;
     text-align: center;

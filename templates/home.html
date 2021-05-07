@@ -3,316 +3,814 @@
 {% block content %}
 <!-- Slide 1 -->
 <div class="row vertical-center beranda1">
-    <div class="text-center col-sm">
-        <h1 style="color: whitesmoke">Masjid Al-Hidayah</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros vitae
-            <br /> erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel leo <br /> dignissim, in dictum orci posuere. Vestibulum sollicitudin arcu eget elit
-            <br /> cursus lobortis. Morbi tristique dapibus tincidunt. Donec elit arcu, viverra s
-        </p>
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="col-sm-12">
-                    <div class="card" style="height: auto">
-                        <div class="card-horizontal">
-                            <div class="img-square-wrapper" style="margin-top: 20px; margin-right: 10px">
-                                <img class="card-gambar" src="{% static 'img/location.png' %}" alt="Card image cap" />
-                            </div>
-                            <div class="card-body" style="text-align: left">
-                                <h4 class="card-title">Masjid Al-Hidayah</h4>
-                                <p class="card-text" style="
+  <div class="text-center col-sm">
+    <h1 style="color: whitesmoke">Masjid Al-Hidayah</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros vitae
+      <br />
+      erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel
+      leo <br />
+      dignissim, in dictum orci posuere. Vestibulum sollicitudin arcu eget elit
+      <br />
+      cursus lobortis. Morbi tristique dapibus tincidunt. Donec elit arcu,
+      viverra s
+    </p>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-sm-12">
+          <div class="card" style="height: auto">
+            <div class="card-horizontal">
+              <div
+                class="img-square-wrapper"
+                style="margin-top: 20px; margin-right: 10px"
+              >
+                <img
+                  class="card-gambar"
+                  src="{% static 'img/location.png' %}"
+                  alt="Card image cap"
+                />
+              </div>
+              <div class="card-body" style="text-align: left">
+                <h4 class="card-title">Masjid Al-Hidayah</h4>
+                <p
+                  class="card-text"
+                  style="
                     text-align: left;
                     background: none;
                     color: #000000;
                     font-size: 15px;
-                  ">
-                                    Jln. Raya Ciherang <br />Perumahan Purnawirawan Kopassus Pelita 1<br /> Sukatani Tapos Depok
-                                </p>
-                            </div>
-                            <div class="img-square-wrapper" style="margin-top: 20px; margin-right: 10px">
-                                <img class="card-gambar" src="{% static 'img/phone.png' %}" alt="Card image cap" />
-                            </div>
-                            <div class="card-body" style="text-align: left; font-size: 15px">
-                                <h4 class="card-title">Pusat Informasi</h4>
-                                <p class="card-text" style="
+                  "
+                >
+                  Jln. Raya Ciherang <br />Perumahan Purnawirawan Kopassus
+                  Pelita 1<br />
+                  Sukatani Tapos Depok
+                </p>
+              </div>
+              <div
+                class="img-square-wrapper"
+                style="margin-top: 20px; margin-right: 10px"
+              >
+                <img
+                  class="card-gambar"
+                  src="{% static 'img/phone.png' %}"
+                  alt="Card image cap"
+                />
+              </div>
+              <div class="card-body" style="text-align: left; font-size: 15px">
+                <h4 class="card-title">Pusat Informasi</h4>
+                <p
+                  class="card-text"
+                  style="
                     text-align: left;
                     background: none;
                     color: #000000;
                     font-size: 15px;
-                  ">
-                                    08XXXXXXXXXXX <br /> (0341) XXXXXX
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  "
+                >
+                  08XXXXXXXXXXX <br />
+                  (0341) XXXXXX
+                </p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <!-- Slide 1 -->
 
 <!-- Slide 2 -->
 <div class="container-fluid vertical-center beranda2">
-    <h1>INFORMASI LAPORAN</h1>
-    <div class="col-md-9 mx-auto" style="position: relative;">
-        <div class="tab">
-            <h3>tes</h3>
-            <h3>tes</h3>
-            <h3>tes</h3>
-            <h3>tes</h3>
-            <h3>tes</h3>
-        </div>
-        <div class="detail-laporan">
-            <div class="total">
-                <h1><strong>Laporan Saldo Infaq : </strong></h1>
-                <h1 id="number">Rp 8.540.000,-</h1>
-            </div>
-            <div class="details">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros vitae erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel leo dignissim,
-                </p>
-                <button class="btn btn-secondary" style="background-color: white; color: black; border-radius: 10px;">Lihat Laporan Lengkap</button>
-            </div>
-        </div>
+  <h1>INFORMASI LAPORAN</h1>
+  <div class="col-md-9 mx-auto" style="position: relative">
+    <div class="tab laporan-tab">
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item mr-1 active">
+          <a href="#infaq" class="nav-link link" data-toggle="tab"> Infaq </a>
+        </li>
+        <li class="nav-item mr-1">
+          <a href="#zakat" class="nav-link link" data-toggle="tab"> Zakat </a>
+        </li>
+        <li class="nav-item mr-1">
+          <a href="#wakaf" class="nav-link link" data-toggle="tab"> Wakaf </a>
+        </li>
+        <li class="nav-item mr-1">
+          <a href="#shodaqoh" class="nav-link link" data-toggle="tab">
+            Shodaqoh
+          </a>
+        </li>
+        <li class="nav-item mr-1">
+          <a href="#donasi" class="nav-link link" data-toggle="tab"> Donasi </a>
+        </li>
+      </ul>
     </div>
+    <div class="detail-laporan">
+      <div class="tab-content flex-center">
+        <div class="tab-pane fade show active content" id="infaq">
+          <div class="total">
+            <h1><strong>Laporan Saldo Infaq : </strong></h1>
+            <h1 id="number">Rp 8.540.000,-</h1>
+          </div>
+          <div class="details">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac
+              eros vitae erat dapibus faucibus semper sed elit. Curabitur
+              pellentesque velit vel leo dignissim,
+            </p>
+            <button
+              class="btn btn-secondary"
+              style="background-color: white; color: black; border-radius: 10px"
+            >
+              Lihat Laporan Lengkap
+            </button>
+          </div>
+        </div>
+        <div class="tab-pane fade show" id="zakat">
+          <div class="total">
+            <h1><strong>Laporan Saldo Zakat : </strong></h1>
+            <h1 id="number">Rp 8.540.000,-</h1>
+          </div>
+          <div class="details">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac
+              eros vitae erat dapibus faucibus semper sed elit. Curabitur
+              pellentesque velit vel leo dignissim,
+            </p>
+            <button
+              class="btn btn-secondary"
+              style="background-color: white; color: black; border-radius: 10px"
+            >
+              Lihat Laporan Lengkap
+            </button>
+          </div>
+        </div>
+        <div class="tab-pane fade show" id="wakaf">
+          <div class="total">
+            <h1><strong>Laporan Saldo Wakaf : </strong></h1>
+            <h1 id="number">Rp 8.540.000,-</h1>
+          </div>
+          <div class="details">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac
+              eros vitae erat dapibus faucibus semper sed elit. Curabitur
+              pellentesque velit vel leo dignissim,
+            </p>
+            <button
+              class="btn btn-secondary"
+              style="background-color: white; color: black; border-radius: 10px"
+            >
+              Lihat Laporan Lengkap
+            </button>
+          </div>
+        </div>
+        <div class="tab-pane fade show" id="shodaqoh">
+          <div class="total">
+            <h1><strong>Laporan Saldo Shodaqoh : </strong></h1>
+            <h1 id="number">Rp 8.540.000,-</h1>
+          </div>
+          <div class="details">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac
+              eros vitae erat dapibus faucibus semper sed elit. Curabitur
+              pellentesque velit vel leo dignissim,
+            </p>
+            <button
+              class="btn btn-secondary"
+              style="background-color: white; color: black; border-radius: 10px"
+            >
+              Lihat Laporan Lengkap
+            </button>
+          </div>
+        </div>
+        <div class="tab-pane fade show" id="donasi">
+          <div class="total">
+            <h1><strong>Laporan Saldo Donasi : </strong></h1>
+            <h1 id="number">Rp 8.540.000,-</h1>
+          </div>
+          <div class="details">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac
+              eros vitae erat dapibus faucibus semper sed elit. Curabitur
+              pellentesque velit vel leo dignissim,
+            </p>
+            <button
+              class="btn btn-secondary"
+              style="background-color: white; color: black; border-radius: 10px"
+            >
+              Lihat Laporan Lengkap
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Slide 2 -->
 
-
 <!-- Slide 3-->
-<div class="containter-fluid beranda3" style="padding-top: 50px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                <h1 style="font-size: 50px;">
-                    <strong>Jadwal</strong>
-                </h1>
-                <br>
-                <br>
-                <div class="col" style="box-shadow: 4px 5px #e5e5e5; background-color: #007320; border: none;">
-                    <a class=" btn btn-primary " style=" background-color: #007320; border: none; ">Jadwal Kajian</a>
-                </div>
-                <div class="col " style="padding-top: 7px;  border-bottom: solid #e5e5e5;  ">
-                    <a class="btn " style="background-color: white; color: black; ">Jadwal Khatib Jumat</a>
-                </div>
-            </div>
-            <div class="col-md-1 pembatasSlide3 " style="margin-left: 50px; "></div>
-            <div class="col-md-8 ">
-                <h2> Pantau Jadwal Kegiatan <br>Masjid Al-Hidayah disini</h2>
-                <br>
-                <div class="row ">
-                    <div class="col-4 ">
-                        <a style="background-color: #E5E5E5; padding: 5px; padding-right: 100px; border-radius: 0px 17.5px 17.5px 0px;">Kajian Pekan ini <br></a>
-
-                    </div>
-                </div>
-                <br> {% for data in jadwal%}
-                <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
-                <div class="card shadow p-3">
-                    <div class="row">
-                        <div class="col" style="text-align: center; margin-left: -200px;">
-                            <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
-                            <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
-                        </div>
-                        <div class="col pembatasSlide3card " style="margin-left: -200px; "></div>
-                        <div class="col" style="margin-left: -550px;">
-                            <h5 class="card-title" style="color: #007320;">{{data.title}}</h5>
-                            {% if data.online%}
-                            <a class="btn btn-primary " style="background-color: #FCC740; color:black; border: none; font-size: 10px; ">KAJIAN ONLINE</a> {% endif %}
-                            <h5 class="card-title">{{data.penceramah}}</h5>
-                            <div class="row" style="color: #888888;">
-                                <i class="fas fa-clock"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none;">{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}<br></a>
-                            </div>
-                            <div class="row" style="color: #888888;">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none;">Masjid Al-Hidayah</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Ini akhir cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
-                <br> {% endfor %}
-                <br>
-
-                <br>
-                <a class="btn btn-primary " href="{% url 'jadwal'%}" style="background-color: #FCC740; color:black; border: none; float: right; border-radius: 50px; ">Lihat Semua Jadwal</a>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
+<div class="containter-fluid beranda3" style="padding-top: 50px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <h1 style="font-size: 50px">
+          <strong>Jadwal</strong>
+        </h1>
+        <br />
+        <br />
+        <div class="col-md-3">
+          <ul class="nav nav-tabs flex-column">
+            <li class="nav-item mr-1 active data">
+              <a
+                href="#jadwal-kajian"
+                class="nav-link"
+                data-toggle="tab"
+                >Jadwal Kajian</a
+              >
+            </li>
+            <li class="nav-item mr-1 data">
+              <a
+                href="#jadwal-jumat"
+                class="nav-link"
+                data-toggle="tab"
+                >Jadwal Khatib Jumat</a
+              >
+            </li>
+          </ul>
         </div>
-    </div>
-
-
-    <!-- Slide 3-->
-
-
-
-    <!-- Slide 4 -->
-    <div class="containter-fluid vertical center beranda4" style="padding-top: 200px; padding-bottom: 200px;">
-        <div class="container">
+      </div>
+      <div class="col-md-1 pembatasSlide3" style="margin-left: 50px"></div>
+      <div class="col-md-8">
+        <h2>Pantau Jadwal Kegiatan <br />Masjid Al-Hidayah disini</h2>
+        <br />
+        <div class="tab-content flex-center">
+          <div class="data tab-pane fade show active" id="jadwal-kajian">
             <div class="row">
-                <div class="col-md-4">
-                    <h1 style="color: white; font-size: 50px; font-family: Mulish;font-style: normal; font-weight: bold;"><strong>Layanan<br>Masjid<br>Al-Hidayah</strong></h1>
-                    <br>
-                    <br>
-                    <h5 style="color: white; font-size: 24px; font-family: Playfair Display; font-style: normal; font-weight: normal; line-height: 32px;">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. <br> In ac eros vitae erat dapibus <br> faucibus semper sed elit. <br> Curabitur pellentesque velit <br> vel leo dignissim,</h5>
-                    <br>
-                    <br>
-
-                </div>
-
-                <!-- Ini cards yang kotak itu-->
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-6" style="padding-right:0; padding-left:0;">
-                            <div class="card bg-transparent text-white " style="border: none; ">
-                                <img src="../static/img/fotoPemakamanSlide4.png" class="card-img-top img-fluid" style="padding:0%; width: 100%;  object-fit: cover;" alt="...">
-                                <div class="card-body card-img-overlay  d-flex  align-items-end" style="margin-right: 50px; margin-left: 30px; background: linear-gradient(180deg,rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%); mix-blend-mode: normal;">
-                                    <a class="card-title me-auto p-2 align-self-end" style="text-decoration: none; color: #FFFFFF; font-size: 24px;">
-                                        <strong>Pemakaman</strong></a>
-                                    <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #FCC740; background-color: transparent; color: #FCC740; font-size: 20px;"><b>...</b></a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-6" style="padding-right:0; padding-left:0;">
-                            <div class="card bg-transparent text-white " style="border: none;">
-                                <img src="../static/img/fotoYatimSlide4.png" class="card-img-top img-fluid" style="padding:0%; width: 100%;  object-fit: cover;" alt="...">
-                                <div class="card-body card-img-overlay  d-flex  align-items-end" style="margin-right: 50px; margin-left: 30px; background: linear-gradient(180deg,rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%); mix-blend-mode: normal;">
-                                    <a class="card-title me-auto p-2 align-self-end" style="text-decoration: none; color: #FFFFFF; font-size: 24px;">
-                                        <strong>Anak Yatim</strong></a>
-                                    <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #FCC740; background-color: transparent; color: #FCC740; font-size: 20px;"><b>...</b></a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-6" style="padding-right:0; padding-left:0;">
-                            <div class="card bg-transparent text-white " style="border: none;">
-                                <img src="../static/img/fotoZakatSlide4.png" class="card-img-top img-fluid" style="padding:0%; width: 100%;  object-fit: cover;" alt="...">
-                                <div class="card-body card-img-overlay  d-flex  align-items-end" style="margin-right: 50px; margin-left: 30px; background: linear-gradient(180deg,rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%); mix-blend-mode: normal;">
-                                    <a class="card-title me-auto p-2 align-self-end" style="text-decoration: none; color: #FFFFFF; font-size: 24px;">
-                                        <strong>Zakat</strong></a>
-                                    <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #FCC740; background-color: transparent; color: #FCC740; font-size: 20px;"><b>...</b></a>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-                <!-- Ini cards yang kotak itu-->
+              <div class="col-4">
+                <a
+                  style="
+                    background-color: #e5e5e5;
+                    padding: 5px;
+                    padding-right: 100px;
+                    border-radius: 0px 17.5px 17.5px 0px;
+                  "
+                  >Kajian Pekan ini <br
+                /></a>
+              </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-    </div>
-    <!-- Slide 4 -->
+            <br />
+            {% for data in jadwal%}
+            <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
+            <div class="card shadow p-3">
+              <div class="row">
+                <div
+                  class="col"
+                  style="text-align: center; margin-left: -200px"
+                >
+                  <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
+                  <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
+                </div>
+                <div
+                  class="col pembatasSlide3card"
+                  style="margin-left: -200px"
+                ></div>
+                <div class="col" style="margin-left: -550px">
+                  <h5 class="card-title" style="color: #007320">
+                    {{data.title}}
+                  </h5>
+                  {% if data.online%}
+                  <a
+                    class="btn btn-primary"
+                    style="
+                      background-color: #fcc740;
+                      color: black;
+                      border: none;
+                      font-size: 10px;
+                    "
+                    >KAJIAN ONLINE</a
+                  >
+                  {% endif %}
+                  <h5 class="card-title">{{data.penceramah}}</h5>
+                  <div class="row" style="color: #888888">
+                    <i class="fas fa-clock"></i>
+                    <a
+                      class="card-text"
+                      style="color: #888888; text-decoration: none"
+                      >{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}<br
+                    /></a>
+                  </div>
+                  <div class="row" style="color: #888888">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a
+                      class="card-text"
+                      style="color: #888888; text-decoration: none"
+                      >Masjid Al-Hidayah</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Ini akhir cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
+            <br />
+            {% endfor %}
+            <br />
 
+            <br />
+            <a
+              class="btn btn-primary"
+              href="{% url 'jadwal'%}"
+              style="
+                background-color: #fcc740;
+                color: black;
+                border: none;
+                float: right;
+                border-radius: 50px;
+              "
+              >Lihat Semua Jadwal</a
+            >
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
+          <div class="data tab-pane fade show" id="jadwal-jumat">
+            <div class="row">
+              <div class="col-4">
+                <a
+                  style="
+                    background-color: #e5e5e5;
+                    padding: 5px;
+                    padding-right: 100px;
+                    border-radius: 0px 17.5px 17.5px 0px;
+                  "
+                  >Khatib Bulan ini <br
+                /></a>
+              </div>
+            </div>
+            <br />
+            {% for data in jadwal%}
+            <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
+            <div class="card shadow p-3">
+              <div class="row">
+                <div
+                  class="col"
+                  style="text-align: center; margin-left: -200px"
+                >
+                  <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
+                  <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
+                </div>
+                <div
+                  class="col pembatasSlide3card"
+                  style="margin-left: -200px"
+                ></div>
+                <div class="col" style="margin-left: -550px">
+                  <h5 class="card-title" style="color: #007320">
+                    {{data.title}}
+                  </h5>
+                  {% if data.online%}
+                  <a
+                    class="btn btn-primary"
+                    style="
+                      background-color: #fcc740;
+                      color: black;
+                      border: none;
+                      font-size: 10px;
+                    "
+                    >KAJIAN ONLINE</a
+                  >
+                  {% endif %}
+                  <h5 class="card-title">{{data.penceramah}}</h5>
+                  <div class="row" style="color: #888888">
+                    <i class="fas fa-clock"></i>
+                    <a
+                      class="card-text"
+                      style="color: #888888; text-decoration: none"
+                      >{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}<br
+                    /></a>
+                  </div>
+                  <div class="row" style="color: #888888">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a
+                      class="card-text"
+                      style="color: #888888; text-decoration: none"
+                      >Masjid Al-Hidayah</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Ini akhir cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
+            <br />
+            {% endfor %}
+            <br />
+
+            <br />
+            <a
+              class="btn btn-primary"
+              href="{% url 'jadwal'%}"
+              style="
+                background-color: #fcc740;
+                color: black;
+                border: none;
+                float: right;
+                border-radius: 50px;
+              "
+              >Lihat Semua Jadwal</a
+            >
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Slide 3-->
+  <!-- Slide 4 -->
+  <div
+    class="containter-fluid vertical center beranda4"
+    style="padding-top: 200px; padding-bottom: 200px"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h1
+            style="
+              color: white;
+              font-size: 50px;
+              font-family: Mulish;
+              font-style: normal;
+              font-weight: bold;
+            "
+          >
+            <strong>Layanan<br />Masjid<br />Al-Hidayah</strong>
+          </h1>
+          <br />
+          <br />
+          <h5
+            style="
+              color: white;
+              font-size: 24px;
+              font-family: Playfair Display;
+              font-style: normal;
+              font-weight: normal;
+              line-height: 32px;
+            "
+          >
+            Lorem ipsum dolor sit amet,<br />
+            consectetur adipiscing elit. <br />
+            In ac eros vitae erat dapibus <br />
+            faucibus semper sed elit. <br />
+            Curabitur pellentesque velit <br />
+            vel leo dignissim,
+          </h5>
+          <br />
+          <br />
+        </div>
+
+        <!-- Ini cards yang kotak itu-->
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-6" style="padding-right: 0; padding-left: 0">
+              <div class="card bg-transparent text-white" style="border: none">
+                <img
+                  src="{% static 'img/fotoPemakamanSlide4.png' %}"
+                  class="card-img-top img-fluid"
+                  style="padding: 0%; width: 100%; object-fit: cover"
+                  alt="..."
+                />
+                <div
+                  class="card-body card-img-overlay d-flex align-items-end"
+                  style="
+                    margin-right: 50px;
+                    margin-left: 30px;
+                    background: linear-gradient(
+                      180deg,
+                      rgba(82, 82, 82, 0) 45.51%,
+                      rgba(0, 0, 0, 0.7) 100%
+                    );
+                    mix-blend-mode: normal;
+                  "
+                >
+                  <a
+                    class="card-title me-auto p-2 align-self-end"
+                    style="
+                      text-decoration: none;
+                      color: #ffffff;
+                      font-size: 24px;
+                    "
+                  >
+                    <strong>Pemakaman</strong></a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-secondary card-link float-end"
+                    style="
+                      border-radius: 50%;
+                      border-color: #fcc740;
+                      background-color: transparent;
+                      color: #fcc740;
+                      font-size: 20px;
+                    "
+                    ><b>...</b></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6" style="padding-right: 0; padding-left: 0">
+              <div class="card bg-transparent text-white" style="border: none">
+                <img
+                  src="{% static 'img/fotoYatimSlide4.png' %}"
+                  class="card-img-top img-fluid"
+                  style="padding: 0%; width: 100%; object-fit: cover"
+                  alt="..."
+                />
+                <div
+                  class="card-body card-img-overlay d-flex align-items-end"
+                  style="
+                    margin-right: 50px;
+                    margin-left: 30px;
+                    background: linear-gradient(
+                      180deg,
+                      rgba(82, 82, 82, 0) 45.51%,
+                      rgba(0, 0, 0, 0.7) 100%
+                    );
+                    mix-blend-mode: normal;
+                  "
+                >
+                  <a
+                    class="card-title me-auto p-2 align-self-end"
+                    style="
+                      text-decoration: none;
+                      color: #ffffff;
+                      font-size: 24px;
+                    "
+                  >
+                    <strong>Anak Yatim</strong></a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-secondary card-link float-end"
+                    style="
+                      border-radius: 50%;
+                      border-color: #fcc740;
+                      background-color: transparent;
+                      color: #fcc740;
+                      font-size: 20px;
+                    "
+                    ><b>...</b></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6" style="padding-right: 0; padding-left: 0">
+              <div class="card bg-transparent text-white" style="border: none">
+                <img
+                  src="{% static 'img/fotoZakatSlide4.png' %}"
+                  class="card-img-top img-fluid"
+                  style="padding: 0%; width: 100%; object-fit: cover"
+                  alt="..."
+                />
+                <div
+                  class="card-body card-img-overlay d-flex align-items-end"
+                  style="
+                    margin-right: 50px;
+                    margin-left: 30px;
+                    background: linear-gradient(
+                      180deg,
+                      rgba(82, 82, 82, 0) 45.51%,
+                      rgba(0, 0, 0, 0.7) 100%
+                    );
+                    mix-blend-mode: normal;
+                  "
+                >
+                  <a
+                    class="card-title me-auto p-2 align-self-end"
+                    style="
+                      text-decoration: none;
+                      color: #ffffff;
+                      font-size: 24px;
+                    "
+                  >
+                    <strong>Zakat</strong></a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-secondary card-link float-end"
+                    style="
+                      border-radius: 50%;
+                      border-color: #fcc740;
+                      background-color: transparent;
+                      color: #fcc740;
+                      font-size: 20px;
+                    "
+                    ><b>...</b></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Ini cards yang kotak itu-->
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+  </div>
+  <!-- Slide 4 -->
+
+  <!-- Slide 5-->
+  <div
+    class="containter-fluid beranda3"
+    style="padding-top: 50px; background-color: #f5f5f5"
+  >
+    <div class="container">
+      <!-- Judul kegiatan -->
+      <div class="row">
+        <div class="col-md-2">
+          <h1 style="font-size: 50px">
+            <strong>Kegiatan</strong>
+          </h1>
+        </div>
+        <div class="col-md-1 pembatasSlide3" style="margin-left: 50px"></div>
+        <div class="col-md-8">
+          <h2
+            style="
+              font-family: Playfair Display;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 30px;
+              line-height: 40px;
+            "
+          >
+            Galeri dan dokumentasi <br />kegiatan Masjid Al-Hidayah
+          </h2>
+          <br />
+        </div>
+      </div>
+      <!-- Judul kegiatan -->
+
+      <!--row gambar kegiatan yang bisa di hover-->
+      <div class="row align-items-center">
+        <!--Kegiatan 1-->
+        <div class="card bg-transparent" style="width: 22rem; border: none">
+          <img
+            src="../static/img/fotoSlide5Qurban.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <a
+              class="card-title"
+              style="text-decoration: none; color: black; font-size: 24px"
+            >
+              <strong>Kurban</strong></a
+            >
+            <a
+              href="#"
+              class="btn btn-secondary card-link float-end"
+              style="
+                border-radius: 50%;
+                border-color: #303030;
+                background-color: transparent;
+                color: #007320;
+                font-size: 20px;
+              "
+              >...
+            </a>
+          </div>
+        </div>
+        <!--Kegiatan 1-->
+
+        <!--Kegiatan 2-->
+        <div class="card bg-transparent" style="width: 22rem; border: none">
+          <img
+            src="../static/img/fotoSlide5Tarawih.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <a
+              class="card-title"
+              style="text-decoration: none; color: black; font-size: 24px"
+            >
+              <strong>Tarawih</strong></a
+            >
+            <a
+              href="#"
+              class="btn btn-secondary card-link float-end"
+              style="
+                border-radius: 50%;
+                border-color: #303030;
+                background-color: transparent;
+                color: #007320;
+                font-size: 20px;
+              "
+              >...
+            </a>
+          </div>
+        </div>
+        <!--Kegiatan 2-->
+
+        <!--Kegiatan 3-->
+        <div class="card bg-transparent" style="width: 22rem; border: none">
+          <img
+            src="../static/img/fotoSlide5Jumatan.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <a
+              class="card-title"
+              style="text-decoration: none; color: black; font-size: 24px"
+            >
+              <strong>Jumatan</strong></a
+            >
+            <a
+              href="#"
+              class="btn btn-secondary card-link float-end"
+              style="
+                border-radius: 50%;
+                border-color: #303030;
+                background-color: transparent;
+                color: #007320;
+                font-size: 20px;
+              "
+              >...
+            </a>
+          </div>
+        </div>
+        <!--Kegiatan 3-->
+
+        <!--Kegiatan 4-->
+        <div class="card bg-transparent" style="width: 22rem; border: none">
+          <img
+            src="../static/img/fotoSlide5Kajian.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <a
+              class="card-title"
+              style="text-decoration: none; color: black; font-size: 24px"
+            >
+              <strong>Kajian</strong></a
+            >
+            <a
+              href="#"
+              class="btn btn-secondary card-link float-end"
+              style="
+                border-radius: 50%;
+                border-color: #303030;
+                background-color: transparent;
+                color: #007320;
+                font-size: 20px;
+              "
+              >...
+            </a>
+          </div>
+        </div>
+        <!--Kegiatan 4-->
+
+        <!--Kegiatan 5-->
+        <div class="card bg-transparent" style="width: 22rem; border: none">
+          <img
+            src="../static/img/fotoSlide5TPQ.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <a
+              class="card-title"
+              style="text-decoration: none; color: black; font-size: 24px"
+            >
+              <strong>TPQ</strong></a
+            >
+            <a
+              href="#"
+              class="btn btn-secondary card-link float-end"
+              style="
+                border-radius: 50%;
+                border-color: #303030;
+                background-color: transparent;
+                color: #007320;
+                font-size: 20px;
+              "
+              >...
+            </a>
+          </div>
+        </div>
+        <!--Kegiatan 5-->
+      </div>
+      <!--row gambar kegiatan yang bisa di hover-->
+    </div>
 
     <!-- Slide 5-->
-    <div class="containter-fluid beranda3" style="padding-top: 50px; background-color: #f5f5f5;">
-        <div class="container">
 
-            <!-- Judul kegiatan -->
-            <div class="row">
-                <div class="col-md-2">
-                    <h1 style="font-size: 50px;">
-                        <strong>Kegiatan</strong>
-                    </h1>
-
-                </div>
-                <div class="col-md-1 pembatasSlide3 " style="margin-left: 50px; "></div>
-                <div class="col-md-8 ">
-                    <h2 style="font-family: Playfair Display;font-style: normal;font-weight: normal;font-size: 30px;line-height: 40px;"> Galeri dan dokumentasi <br>kegiatan Masjid Al-Hidayah</h2>
-                    <br>
-                </div>
-            </div>
-            <!-- Judul kegiatan -->
-
-
-            <!--row gambar kegiatan yang bisa di hover-->
-            <div class="row align-items-center">
-                <!--Kegiatan 1-->
-                <div class="card bg-transparent" style="width: 22rem; border: none;">
-                    <img src="../static/img/fotoSlide5Qurban.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
-                            <strong>Kurban</strong></a>
-                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
-                    </div>
-                </div>
-                <!--Kegiatan 1-->
-
-                <!--Kegiatan 2-->
-                <div class="card bg-transparent" style="width: 22rem; border: none;">
-                    <img src="../static/img/fotoSlide5Tarawih.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-
-                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
-                            <strong>Tarawih</strong></a>
-                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
-
-
-
-                    </div>
-                </div>
-                <!--Kegiatan 2-->
-
-                <!--Kegiatan 3-->
-                <div class="card bg-transparent" style="width: 22rem; border: none;">
-                    <img src="../static/img/fotoSlide5Jumatan.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
-                            <strong>Jumatan</strong></a>
-                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
-
-                    </div>
-                </div>
-                <!--Kegiatan 3-->
-
-                <!--Kegiatan 4-->
-                <div class="card bg-transparent" style="width: 22rem; border: none;">
-                    <img src="../static/img/fotoSlide5Kajian.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-
-                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
-                            <strong>Kajian</strong></a>
-                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
-
-
-                    </div>
-                </div>
-                <!--Kegiatan 4-->
-
-                <!--Kegiatan 5-->
-                <div class="card bg-transparent" style="width: 22rem; border: none;">
-                    <img src="../static/img/fotoSlide5TPQ.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-
-                        <a class="card-title" style="text-decoration: none; color: black; font-size: 24px;">
-                            <strong>TPQ</strong></a>
-                        <a href="#" class="btn btn-secondary card-link float-end" style="border-radius: 50%; border-color: #303030; background-color: transparent; color: #007320; font-size: 20px;">... </a>
-
-
-                    </div>
-                </div>
-                <!--Kegiatan 5-->
-            </div>
-            <!--row gambar kegiatan yang bisa di hover-->
-
-
-        </div>
-
-
-        <!-- Slide 5-->
-
-        {% endblock content %}
+    {% endblock content %}
+  </div>
+</div>
