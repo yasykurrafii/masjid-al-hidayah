@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.utils import timezone
 import datetime
 import requests
 from .models import *
@@ -6,14 +7,14 @@ from .models import *
 # Create your views here.
 
 # Global Variable untuk date
-date = datetime.datetime.now()
+date = timezone.now()
 now = date.strftime("%A, %d %B %Y")
 
 # Function untuk fetching api
 
 
 def fetch_solat():
-    tanggal = datetime.datetime.now()
+    tanggal = timezone.now()
     tanggal = tanggal.strftime("%Y-%m-%d")
     data = requests.get(
         "https://api.pray.zone/v2/times/day.json?city=jakarta&date=" + tanggal)
@@ -46,7 +47,7 @@ def jadwal(request):
         bulanDepan = datetime.date(date.year, int(date.month) + 1, date.day)
     dateLalu = datetime.date(date.year, 1,1)
     jadwalBulanIni = JadwalModel.objects.filter(
-        tanggal__range=[bulanIni, bulanDepan]).order_by('-tanggal')
+        tanggal__range=[bulanIni, bulanDepan]).order_by('tanggal')
     jadwalLewat = JadwalModel.objects.filter(tanggal__range=[dateLalu,bulanIni])[:5]
     return render(request, 'jadwal.html', {'date': now, 'subuh': solat['Fajr'],
                                            'dzuhur': solat['Dhuhr'],
