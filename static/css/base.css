@@ -23,7 +23,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
-    text-decoration:underline solid 5px transparent;
+    text-decoration: underline solid 5px transparent;
     transition: text-decoration 1s ease;
 }
 
@@ -153,53 +153,57 @@ tr {
 
 
 /* Ini buat Laporan */
-.laporan-tab .active{
+
+.laporan-tab .active {
     border-bottom: 8px solid #FCC740 !important;
 }
 
-.laporan-tab .nav-item{
+.laporan-tab .nav-item {
     border-bottom: solid white 3px;
 }
 
-.laporan-tab .link{
+.laporan-tab .link {
     color: #ffffff;
 }
 
-.laporan-tab .active .link{
+.laporan-tab .active .link {
     color: #FCC740;
 }
 
-.laporan-tab .nav-tabs .nav-link:hover{
+.laporan-tab .nav-tabs .nav-link:hover {
     border: none !important;
 }
 
-.laporan-tab .nav-tabs{
-    border-bottom:none !important;
+.laporan-tab .nav-tabs {
+    border-bottom: none !important;
 }
 
-.detail-laporan .content{
+.detail-laporan .content {
     display: flex;
     justify-content: space-around;
 }
 
+
 /* css untuk jadwal */
-.beranda3 ul{
+
+.beranda3 ul {
     width: 276px;
     border-top: 1px solid #dee2e6;
 }
 
-.beranda3 ul .active a{
-    background-color:#007320 !important;
+.beranda3 ul .active a {
+    background-color: #007320 !important;
     color: #ffffff !important;
     border-radius: 0;
-    border:none !important;
+    border: none !important;
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.beranda3 ul .nav-link{
-    background-color:#ffffff ;
-    color:#303030;
+.beranda3 ul .nav-link {
+    background-color: #ffffff;
+    color: #303030;
 }
+
 
 /* Ini css buatfooter */
 
@@ -372,7 +376,7 @@ hr {
         display: none;
     }
     .tabeltabelan {
-        display: none;
+        display: none !important;
     }
     .Navbar__Items,
     .Navbar {
