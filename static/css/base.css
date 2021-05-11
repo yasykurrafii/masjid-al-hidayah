@@ -8,13 +8,21 @@ body {
     font-family: "Mulish", sans-serif;
 }
 
+.mulish{
+    font-family: 'Mulish', sans-serif;
+}
+
+.playfair{
+    font-family: 'Playfair Display', sans-serif;
+}
+
 .header {
     overflow: hidden;
     background-color: #ffffff;
     padding: 20px 20px;
 }
 
-.header a {
+.navbar-nav a {
     float: left;
     color: black;
     text-align: center;
@@ -27,12 +35,28 @@ body {
     transition: text-decoration 1s ease;
 }
 
+.home-info h4{
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+}
+
+.home-info p{
+    font-family: "Playfair Display", sans-serif;
+    color: black !important;
+    font-size: 18px;
+}
+
+.menu .active{
+    text-decoration: underline solid 5px #FCC740;
+    color: black;
+}
+
 .header a.logo {
     font-size: 25px;
     font-weight: bold;
 }
 
-.header a:hover {
+.navbar-nav a:hover {
     text-decoration: underline solid 5px #FCC740;
     color: black;
 }
@@ -81,6 +105,31 @@ tr {
     background-image: url("../img/fotoHome.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.div-laporan{
+    display:flex;
+    align-items:center;
+}
+
+.btn-laporan{
+    width: 248px;
+    height:40px;
+    background-color: white !important;  
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    float: right;
+}
+
+.btn-laporan a{
+    text-decoration: none;
+    color: black;
+}
+
+.btn-laporan:hover > a{
+    text-decoration: none;
+    color: #FCC740;
 }
 
 .beranda1 h1 {
@@ -133,6 +182,7 @@ tr {
     box-shadow: inset 0 0 0 2000px rgba(0, 115, 32, 0.85);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Mulish', sans-serif;
 }
 
 .beranda4 {
@@ -153,29 +203,36 @@ tr {
 
 
 /* Ini buat Laporan */
-
-.laporan-tab .active {
+.laporan-tab  li .active {
     border-bottom: 8px solid #FCC740 !important;
+    background-color: transparent !important;
+    transition: border-bottom .5s ease;
 }
 
-.laporan-tab .nav-item {
-    border-bottom: solid white 3px;
+.laporan-tab .nav-link {
+    border-bottom: solid white 3px !important;
 }
 
 .laporan-tab .link {
     color: #ffffff;
 }
 
-.laporan-tab .active .link {
-    color: #FCC740;
+.laporan-tab li .active {
+    color: #FCC740 !important;
 }
 
-.laporan-tab .nav-tabs .nav-link:hover {
+.laporan-tab .nav-tabs:hover {
     border: none !important;
 }
 
 .laporan-tab .nav-tabs {
     border-bottom: none !important;
+}
+
+.laporan-tab .nav-tabs .nav-link{
+    border-left: none !important;
+    border-top: none !important;
+    border-right: none !important;
 }
 
 .detail-laporan .content {
@@ -191,18 +248,41 @@ tr {
     border-top: 1px solid #dee2e6;
 }
 
-.beranda3 ul .active a {
+.beranda3 ul .active {
     background-color: #007320 !important;
     color: #ffffff !important;
     border-radius: 0;
     border: none !important;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25)
 }
 
 .beranda3 ul .nav-link {
     background-color: #ffffff;
     color: #303030;
 }
+
+.tab-col{
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+}
+
+.tab-col h1 strong{
+    font-size: 68px;
+}
+
+.tab-col a{
+    font-size: 20px;
+}
+
+.card-jadwal{
+    font-family: 'Mulish', sans-serif;
+}
+
+.card-jadwal .col .bold{
+    font-weight: bold;
+}
+
+
 
 
 /* Ini css buatfooter */
@@ -304,8 +384,16 @@ hr {
     margin-top: 33px;
 }
 
+.details p{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 18px;
+}
+
 .details button {
     width: 248px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .details p {
@@ -348,6 +436,9 @@ hr {
     }
     .navbar-brand {
         background-size: cover;
+    }
+    .table{
+        display:none;
     }
     .header a {
         float: none;

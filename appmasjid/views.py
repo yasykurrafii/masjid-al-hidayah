@@ -33,7 +33,8 @@ def index(request):
                                          'dzuhur': solat['Dhuhr'],
                                          'ashr': solat['Asr'],
                                          'maghrib': solat['Maghrib'],
-                                         'isya': solat['Isha']})
+                                         'isya': solat['Isha'],
+                                         'navhome' : 'active'})
 
 
 def jadwal(request):
@@ -55,7 +56,8 @@ def jadwal(request):
                                            'maghrib': solat['Maghrib'],
                                            'isya': solat['Isha'],
                                            'jadwal': jadwalBulanIni,
-                                           'jadwalLewat':jadwalLewat})
+                                           'jadwalLewat':jadwalLewat,
+                                           'navjadwal' : 'active'})
 
 
 def laporan(request):
@@ -65,7 +67,8 @@ def laporan(request):
                                             'dzuhur': solat['Dhuhr'],
                                             'ashr': solat['Asr'],
                                             'maghrib': solat['Maghrib'],
-                                            'isya': solat['Isha']})
+                                            'isya': solat['Isha'],
+                                            'navlaporan' : 'active'})
 
 
 def informasi(request):
@@ -75,4 +78,5 @@ def informasi(request):
                                               'dzuhur': solat['Dhuhr'],
                                               'ashr': solat['Asr'],
                                               'maghrib': solat['Maghrib'],
-                                              'isya': solat['Isha']})
+                                              'isya': solat['Isha'],
+                                              'navinformasi' : 'active'})
