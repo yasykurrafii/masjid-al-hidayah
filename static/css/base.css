@@ -1,540 +1,538 @@
-    @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
-    * {
-        box-sizing: border-box;
-    }
-    
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Mulish", sans-serif;
+}
+
+.mulish {
+    font-family: 'Mulish', sans-serif;
+}
+
+.playfair {
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 20px 20px;
+}
+
+.navbar-nav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    text-decoration: underline solid 5px transparent;
+    transition: text-decoration 1s ease;
+}
+
+.home-info h4 {
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+}
+
+.home-info p {
+    font-family: "Playfair Display", sans-serif;
+    color: black !important;
+    font-size: 18px;
+}
+
+.menu .active {
+    text-decoration: underline solid 5px #FCC740;
+    color: black;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar-nav a:hover {
+    text-decoration: underline solid 5px #FCC740;
+    color: black;
+}
+
+.header-right {
+    float: right;
+    margin: auto;
+    padding-right: 10px;
+    margin-right: auto;
+}
+
+.header-right-toggle {
+    display: none;
+}
+
+.header a.tombol {
+    background-color: #007320;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.tengah {
+    float: right;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-right: 32px;
+}
+
+tr {
+    line-height: 4px;
+    min-height: 5px;
+    height: 5px;
+    font-size: 15px;
+    font-family: "Mulish";
+}
+/*Ini Main konten Beranda*/
+
+.beranda1 {
+    padding: auto;
+    margin: auto;
+    background-image: url("../img/fotoHome.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-laporan {
+    display: flex;
+    align-items: center;
+}
+
+.btn-laporan {
+    width: 248px;
+    height: 40px;
+    background-color: white !important;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    float: right;
+}
+
+.btn-laporan a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-laporan:hover>a {
+    text-decoration: none;
+    color: #FCC740;
+}
+
+.beranda1 h1 {
+    color: whitesmoke;
+    text-align: center;
+    margin: 190px auto 35px auto;
+    font-family: "Mulish";
+    background-color: #007320;
+    padding-top: 5px;
+    width: 30%;
+    height: 12%;
+    /* background-color: #007320; */
+}
+
+.beranda h4 {
+    text-align: left;
+    color: black;
+}
+
+.beranda1 p {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 18px;
+    background-color: #007320;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 45%;
+    height: auto;
+    opacity: 0.5;
+    margin-bottom: 100px;
+}
+
+.card-horizontal {
+    display: flex;
+    /* flex: 1 1 auto; */
+}
+
+.card-gambar {
+    padding-top: 10px;
+    width: 74px;
+    height: 84px;
+}
+
+.beranda2 {
+    padding: auto;
+    margin: auto;
+    margin-top: -77px;
+    background-image: url("../img/fotoHome2.png");
+    box-shadow: inset 0 0 0 2000px rgba(0, 115, 32, 0.85);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Mulish', sans-serif;
+}
+
+.beranda4 {
+    padding: auto;
+    margin: auto;
+    background-image: url("../img/fotoSlide4home.png");
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardSlide4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(180deg, rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%);
+    mix-blend-mode: normal;
+}
+/* Ini buat Laporan */
+
+.laporan-tab li .active {
+    border-bottom: 8px solid #FCC740 !important;
+    background-color: transparent !important;
+    transition: border-bottom .5s ease;
+}
+
+.laporan-tab .nav-link {
+    border-bottom: solid white 3px !important;
+}
+
+.laporan-tab .link {
+    color: #ffffff;
+}
+
+.laporan-tab li .active {
+    color: #FCC740 !important;
+}
+
+.laporan-tab .nav-tabs:hover {
+    border: none !important;
+}
+
+.laporan-tab .nav-tabs {
+    border-bottom: none !important;
+}
+
+.laporan-tab .nav-tabs .nav-link {
+    border-left: none !important;
+    border-top: none !important;
+    border-right: none !important;
+}
+
+.detail-laporan .content {
+    display: flex;
+    justify-content: space-around;
+}
+/* css untuk jadwal */
+
+.beranda3 ul {
+    width: 276px;
+    border-top: 1px solid #dee2e6;
+}
+
+.beranda3 ul .active {
+    background-color: #007320 !important;
+    color: #ffffff !important;
+    border-radius: 0;
+    border: none !important;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25)
+}
+
+.beranda3 ul .nav-link {
+    background-color: #ffffff;
+    color: #303030;
+}
+
+.tab-col {
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+}
+
+.tab-col h1 strong {
+    font-size: 68px;
+}
+
+.tab-col a {
+    font-size: 20px;
+}
+
+.card-jadwal {
+    font-family: 'Mulish', sans-serif;
+}
+
+.card-jadwal .col .bold {
+    font-weight: bold;
+}
+/* Ini css buatfooter */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul>li {
+    padding: 4px;
+    color: #c5cae9;
+}
+
+ul>li:hover {
+    color: #957bda;
+    cursor: pointer;
+}
+
+hr {
+    border-width: 3px;
+}
+
+.card {
+    padding: 2% 7%;
+}
+
+.social>i {
+    padding: 1%;
+    font-size: 15px;
+}
+
+.policy>div {
+    padding: 4px;
+}
+
+.pusatInformasi {
+    font-family: "Titillium Web", sans-serif;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.divider {
+    border-top: 2px solid;
+}
+
+.beranda2 {
+    height: 80vh;
+    padding-top: 150px;
+    color: white;
+}
+
+.beranda2 h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.laporan {
+    justify-content: center;
+    position: relative;
+    height: 350px;
+    margin-left: 300px;
+    margin-right: 300px;
+    /* width: 1100px;
+left: 200px; */
+    font-weight: bold;
+    font-style: normal;
+    font-family: Mulish;
+}
+
+.detail-laporan {
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab {
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 31px;
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 36px;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    font-weight: normal;
+    justify-content: space-between;
+    margin-top: 33px;
+}
+
+.details p {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 18px;
+}
+
+.details button {
+    width: 248px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.details p {
+    width: 452px;
+}
+
+#number {
+    color: #fcc740;
+}
+
+.Navbar__Link {
+    padding-right: 8px;
+}
+
+.Navbar__Items {
+    display: flex;
+}
+
+.Navbar__Items--right {
+    margin-left: auto;
+}
+
+.Navbar__Link-toggle {
+    display: none;
+}
+
+.pembatasSlide3 {
+    border-left: 10px solid #007320;
+    height: 80px;
+}
+
+.pembatasSlide3card {
+    border-left: 3px solid #e5e5e5;
+    height: 100px;
+}
+
+.containercardSlide4 {
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.containercardSlide4 .cardSlide4 {
+    max-width: 300px;
+    height: 187px;
+    background: #ffffff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.containercardSlide4 .cardSlide4:hover {
+    height: auto;
+}
+
+.containercardSlide4 .cardSlide4 .imgBx {
+    position: relative;
+    top: -60px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.containercardSlide4 .cardSlide4 .imgBx img {
+    max-width: 100%;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+.containercardSlide4 .cardSlide4 .kontenSlide4 {
+    position: relative;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.containercardSlide4 .cardSlide4:hover .kontenSlide4 {
+    background: #ffffff;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+@media screen and (max-width: 500px) {
     body {
-        margin: 0;
-        font-family: "Mulish", sans-serif;
+        width: 810px;
     }
-    
-    .mulish {
-        font-family: 'Mulish', sans-serif;
+    .navbar-brand {
+        background-size: cover;
     }
-    
-    .playfair {
-        font-family: 'Playfair Display', sans-serif;
+    .table {
+        display: none;
     }
-    
-    .header {
-        overflow: hidden;
-        background-color: #ffffff;
-        padding: 20px 20px;
+    .header a {
+        float: none;
+        text-align: left;
     }
-    
-    .navbar-nav a {
-        float: left;
-        color: black;
-        text-align: center;
-        padding: 12px;
-        text-decoration: none;
-        font-size: 18px;
-        line-height: 25px;
-        border-radius: 4px;
-        text-decoration: underline solid 5px transparent;
-        transition: text-decoration 1s ease;
-    }
-    
-    .home-info h4 {
-        font-family: 'Mulish', sans-serif;
-        font-weight: bold;
-    }
-    
-    .home-info p {
-        font-family: "Playfair Display", sans-serif;
-        color: black !important;
-        font-size: 18px;
-    }
-    
-    .menu .active {
-        text-decoration: underline solid 5px #FCC740;
-        color: black;
-    }
-    
-    .header a.logo {
-        font-size: 25px;
-        font-weight: bold;
-    }
-    
-    .navbar-nav a:hover {
-        text-decoration: underline solid 5px #FCC740;
-        color: black;
-    }
-    
     .header-right {
         float: right;
-        margin: auto;
-        padding-right: 10px;
-        margin-right: auto;
+        flex-direction: column;
+        /* display: none; */
     }
-    
     .header-right-toggle {
-        display: none;
-    }
-    
-    .header a.tombol {
-        background-color: #007320;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    
-    .tengah {
         float: right;
-        margin: auto;
-        width: 50%;
-        padding: 10px;
-        padding-right: 32px;
-    }
-    
-    tr {
-        line-height: 4px;
-        min-height: 5px;
-        height: 5px;
-        font-size: 15px;
-        font-family: "Mulish";
-    }
-    /*Ini Main konten Beranda*/
-    
-    .beranda1 {
-        padding: auto;
-        margin: auto;
-        background-image: url("../img/fotoHome.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    .div-laporan {
-        display: flex;
-        align-items: center;
-    }
-    
-    .btn-laporan {
-        width: 248px;
-        height: 40px;
-        background-color: white !important;
-        font-weight: bold;
-        font-size: 18px;
-        border-radius: 20px;
-        float: right;
-    }
-    
-    .btn-laporan a {
-        text-decoration: none;
-        color: black;
-    }
-    
-    .btn-laporan:hover>a {
-        text-decoration: none;
-        color: #FCC740;
-    }
-    
-    .beranda1 h1 {
-        color: whitesmoke;
-        text-align: center;
-        margin: 190px auto 35px auto;
-        font-family: "Mulish";
-        background-color: #007320;
-        padding-top: 5px;
-        width: 30%;
-        height: 12%;
-        /* background-color: #007320; */
-    }
-    
-    .beranda h4 {
-        text-align: left;
-        color: black;
-    }
-    
-    .beranda1 p {
-        color: whitesmoke;
-        text-align: center;
-        font-size: 18px;
-        background-color: #007320;
-        display: inline-block;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        width: 45%;
-        height: auto;
-        opacity: 0.5;
-        margin-bottom: 100px;
-    }
-    
-    .card-horizontal {
-        display: flex;
-        /* flex: 1 1 auto; */
-    }
-    
-    .card-gambar {
-        padding-top: 10px;
-        width: 74px;
-        height: 84px;
-    }
-    
-    .beranda2 {
-        padding: auto;
-        margin: auto;
-        margin-top: -77px;
-        background-image: url("../img/fotoHome2.png");
-        box-shadow: inset 0 0 0 2000px rgba(0, 115, 32, 0.85);
-        background-repeat: no-repeat;
-        background-size: cover;
-        font-family: 'Mulish', sans-serif;
-    }
-    
-    .beranda4 {
-        padding: auto;
-        margin: auto;
-        background-image: url("../img/fotoSlide4home.png");
-        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    .cardSlide4 {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: linear-gradient(180deg, rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%);
-        mix-blend-mode: normal;
-    }
-    /* Ini buat Laporan */
-    
-    .laporan-tab li .active {
-        border-bottom: 8px solid #FCC740 !important;
-        background-color: transparent !important;
-        transition: border-bottom .5s ease;
-    }
-    
-    .laporan-tab .nav-link {
-        border-bottom: solid white 3px !important;
-    }
-    
-    .laporan-tab .link {
-        color: #ffffff;
-    }
-    
-    .laporan-tab li .active {
-        color: #FCC740 !important;
-    }
-    
-    .laporan-tab .nav-tabs:hover {
-        border: none !important;
-    }
-    
-    .laporan-tab .nav-tabs {
-        border-bottom: none !important;
-    }
-    
-    .laporan-tab .nav-tabs .nav-link {
-        border-left: none !important;
-        border-top: none !important;
-        border-right: none !important;
-    }
-    
-    .detail-laporan .content {
-        display: flex;
-        justify-content: space-around;
-    }
-    /* css untuk jadwal */
-    
-    .beranda3 ul {
-        width: 276px;
-        border-top: 1px solid #dee2e6;
-    }
-    
-    .beranda3 ul .active {
-        background-color: #007320 !important;
-        color: #ffffff !important;
-        border-radius: 0;
-        border: none !important;
-        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25)
-    }
-    
-    .beranda3 ul .nav-link {
-        background-color: #ffffff;
-        color: #303030;
-    }
-    
-    .tab-col {
-        font-family: 'Mulish', sans-serif;
-        font-weight: bold;
-    }
-    
-    .tab-col h1 strong {
-        font-size: 68px;
-    }
-    
-    .tab-col a {
-        font-size: 20px;
-    }
-    
-    .card-jadwal {
-        font-family: 'Mulish', sans-serif;
-    }
-    
-    .card-jadwal .col .bold {
-        font-weight: bold;
-    }
-    /* Ini css buatfooter */
-    
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    ul>li {
-        padding: 4px;
-        color: #c5cae9;
-    }
-    
-    ul>li:hover {
-        color: #957bda;
+        text-align: right;
+        /* align-self: flex-end; */
+        display: initial;
+        position: absolute;
         cursor: pointer;
     }
-    
-    hr {
-        border-width: 3px;
-    }
-    
-    .card {
-        padding: 2% 7%;
-    }
-    
-    .social>i {
-        padding: 1%;
-        font-size: 15px;
-    }
-    
-    .policy>div {
-        padding: 4px;
-    }
-    
-    .pusatInformasi {
-        font-family: "Titillium Web", sans-serif;
-        color: black;
-        font-size: 1em;
-        font-weight: bold;
-    }
-    
-    .divider {
-        border-top: 2px solid;
-    }
-    
-    .beranda2 {
-        height: 80vh;
-        padding-top: 150px;
-        color: white;
-    }
-    
-    .beranda2 h1 {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .laporan {
-        justify-content: center;
-        position: relative;
-        height: 350px;
-        margin-left: 300px;
-        margin-right: 300px;
-        /* width: 1100px;
-    left: 200px; */
-        font-weight: bold;
-        font-style: normal;
-        font-family: Mulish;
-    }
-    
-    .detail-laporan {
-        margin-top: 46px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .tab {
-        font-size: 22px;
-        line-height: 28px;
-        text-align: center;
-        margin-top: 31px;
-    }
-    
-    .total {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 36px;
-    }
-    
-    .details {
-        display: flex;
-        flex-direction: row;
-        font-size: 18px;
-        font-weight: normal;
-        justify-content: space-between;
-        margin-top: 33px;
-    }
-    
-    .details p {
-        font-family: 'Playfair Display', sans-serif;
-        font-size: 18px;
-    }
-    
-    .details button {
-        width: 248px;
-        font-family: 'Mulish', sans-serif;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    
-    .details p {
-        width: 452px;
-    }
-    
-    #number {
-        color: #fcc740;
-    }
-    
-    .Navbar__Link {
-        padding-right: 8px;
-    }
-    
-    .Navbar__Items {
+    .Navbar__ToggleShow {
         display: flex;
     }
-    
-    .Navbar__Items--right {
-        margin-left: auto;
-    }
-    
-    .Navbar__Link-toggle {
+    .nav-item {
         display: none;
     }
-    
-    .pembatasSlide3 {
-        border-left: 10px solid #007320;
-        height: 80px;
+    .active {
+        display: none;
     }
-    
-    .pembatasSlide3card {
-        border-left: 3px solid #e5e5e5;
-        height: 100px;
+    .tabeltabelan {
+        display: none !important;
     }
-    
-    .containercardSlide4 {
-        position: relative;
-        width: 1100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 30px;
-    }
-    
-    .containercardSlide4 .cardSlide4 {
-        max-width: 300px;
-        height: 187px;
-        background: #ffffff;
-        margin: 30px 10px;
-        padding: 20px 15px;
-        display: flex;
+    .Navbar__Items,
+    .Navbar {
         flex-direction: column;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-        transition: 0.3s ease-in-out;
     }
-    
-    .containercardSlide4 .cardSlide4:hover {
-        height: auto;
+    .Navbar__Items {
+        display: none;
     }
-    
-    .containercardSlide4 .cardSlide4 .imgBx {
-        position: relative;
-        top: -60px;
-        z-index: 1;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    .Navbar__Items--right {
+        margin-left: 0;
     }
-    
-    .containercardSlide4 .cardSlide4 .imgBx img {
-        max-width: 100%;
-        border-radius: 4px;
-        display: block;
-        margin: 0 auto;
+    .Navbar__ToggleShow {
+        display: flex;
     }
-    
-    .containercardSlide4 .cardSlide4 .kontenSlide4 {
-        position: relative;
-        padding: 10px 15px;
-        text-align: center;
-        color: #111;
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.3s ease-in-out;
+    .Navbar__Link-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
     }
-    
-    .containercardSlide4 .cardSlide4:hover .kontenSlide4 {
-        background: #ffffff;
-        visibility: visible;
-        top: -50px;
-        opacity: 1;
-        transition-delay: 0.3s;
-    }
-    
-    @media screen and (max-width: 500px) {
-        body {
-            width: 810px;
-        }
-        .navbar-brand {
-            background-size: cover;
-        }
-        .table {
-            display: none;
-        }
-        .header a {
-            float: none;
-            text-align: left;
-        }
-        .header-right {
-            float: right;
-            flex-direction: column;
-            /* display: none; */
-        }
-        .header-right-toggle {
-            float: right;
-            text-align: right;
-            /* align-self: flex-end; */
-            display: initial;
-            position: absolute;
-            cursor: pointer;
-        }
-        .Navbar__ToggleShow {
-            display: flex;
-        }
-        .nav-item {
-            display: none;
-        }
-        .active {
-            display: none;
-        }
-        .tabeltabelan {
-            display: none !important;
-        }
-        .Navbar__Items,
-        .Navbar {
-            flex-direction: column;
-        }
-        .Navbar__Items {
-            display: none;
-        }
-        .Navbar__Items--right {
-            margin-left: 0;
-        }
-        .Navbar__ToggleShow {
-            display: flex;
-        }
-        .Navbar__Link-toggle {
-            align-self: flex-end;
-            display: initial;
-            position: absolute;
-            cursor: pointer;
-        }
-    }
+}
