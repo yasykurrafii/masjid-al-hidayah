@@ -581,4 +581,7 @@ left: 200px; */
         position: absolute;
         cursor: pointer;
     }
+    .home-info {
+        display: none;
+    }
 }
