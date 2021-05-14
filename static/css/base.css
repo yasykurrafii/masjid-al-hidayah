@@ -484,6 +484,40 @@ left: 200px; */
     transition-delay: 0.3s;
 }
 
+.berandaInformasi1 {
+    padding: auto;
+    margin: auto;
+    background-image: url("../img/fotoinformasiSlide1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.berandaInformasi1 h1 {
+    color: whitesmoke;
+    text-align: center;
+    margin: 190px auto 35px auto;
+    font-family: "Mulish";
+    background-color: #007320;
+    padding-top: 5px;
+    width: 30%;
+    height: 12%;
+    /* background-color: #007320; */
+}
+
+.berandaInformasi1 p {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 18px;
+    background-color: #007320;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 45%;
+    height: auto;
+    opacity: 0.5;
+    margin-bottom: 100px;
+}
+
 @media screen and (max-width: 500px) {
     body {
         width: 810px;
