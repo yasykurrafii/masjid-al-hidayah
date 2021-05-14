@@ -1,26 +1,24 @@
 {% extends 'base.html' %} {% block content %}
 <div class="containter-fluid beranda3" style="padding-top: 50px">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <h1 style="font-size: 50px">
-          <strong>Laporan</strong>
-        </h1>
-        <br />
-        <br />
-        <div class="col-md-3">
-          <ul class="nav nav-tabs flex-column">
-            <li class="nav-item mr-1 data">
-              <a href="#infaq" class="nav-link active" data-bs-toggle="tab"
-                >Infaq</a
+    <div class="container">
+        <div class="row pb-5">
+            <div class="col-md-4">
+                <h1 class="border-end border-success align-self-center" style="font-size: 50px">
+                    <strong>Laporan</strong>
+                </h1>
+                <br />
+                <br />
+                <div class="col-md-4">
+                    <ul class="nav nav-tabs flex-column">
+                        <li class="nav-item mr-1 data">
+                            <a href="#infaq" class="nav-link active" data-bs-toggle="tab">Infaq</a
               >
             </li>
             <li class="nav-item mr-1 data">
               <a href="#zakat" class="nav-link" data-bs-toggle="tab">Zakat</a>
-            </li>
-            <li class="nav-item mr-1 data">
-              <a href="#wakaf" class="nav-link" data-bs-toggle="tab"
-                >Wakaf</a
+                        </li>
+                        <li class="nav-item mr-1 data">
+                            <a href="#wakaf" class="nav-link" data-bs-toggle="tab">Wakaf</a
               >
             </li>
             <li class="nav-item mr-1 data">
@@ -36,7 +34,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-md-1 pembatasSlide3" style="margin-left: 50px"></div>
+
       <div class="col-md-8">
         <h2>Laporan Keuangan Masjid <br />Al-Hidayah</h2>
         <br />
@@ -53,230 +51,222 @@
                   "
                   >Laporan Infaq <br
                 /></a>
-              </div>
+                </div>
             </div>
             <br />
             <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">Jumlah</th>
-                  <th scope="col">Tanggal</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Jumlah</th>
+                        <th scope="col">Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
             </table>
             <br />
-          </div>
-          <div class="data tab-pane fade show" id="zakat">
-            <div class="row">
-              <div class="col-4">
-                <a
-                  style="
-                    background-color: #e5e5e5;
-                    padding: 5px;
-                    padding-right: 100px;
-                    border-radius: 0px 17.5px 17.5px 0px;
-                  "
-                  >Laporan Zakat <br
-                /></a>
-              </div>
-            </div>
-            <br />
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">Tanggal</th>
-                  <th scope="col">Total</th>
-                  <th scope="col">Jenis Zakat</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-            <br />
-            <br />
-          </div>
-          <div class="data tab-pane fade show " id="wakaf">
-            <div class="row">
-              <div class="col-4">
-                <a
-                  style="
-                    background-color: #e5e5e5;
-                    padding: 5px;
-                    padding-right: 100px;
-                    border-radius: 0px 17.5px 17.5px 0px;
-                  "
-                  >Laporan Wakaf <br
-                /></a>
-              </div>
-            </div>
-            <br />
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">Jumlah</th>
-                  <th scope="col">Tanggal</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-            <br />
-          </div>
-          <div class="data tab-pane fade show " id="shodaqoh">
-            <div class="row">
-              <div class="col-4">
-                <a
-                  style="
-                    background-color: #e5e5e5;
-                    padding: 5px;
-                    padding-right: 100px;
-                    border-radius: 0px 17.5px 17.5px 0px;
-                  "
-                  >Laporan Shodaqoh <br
-                /></a>
-              </div>
-            </div>
-            <br />
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">Jumlah</th>
-                  <th scope="col">tanggal</th>
-                  <th scope="col">Jenis</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-            <br />
-          </div>
-          <div class="data tab-pane fade show " id="donasi">
-            <div class="row">
-              <div class="col-4">
-                <a
-                  style="
-                    background-color: #e5e5e5;
-                    padding: 5px;
-                    padding-right: 100px;
-                    border-radius: 0px 17.5px 17.5px 0px;
-                  "
-                  >Laporan Donasi <br
-                /></a>
-              </div>
-            </div>
-            <br />
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">Jumlah</th>
-                  <th scope="col">Tanggal</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-            <br />
-          </div>
         </div>
-      </div>
+        <div class="data tab-pane fade show" id="zakat">
+            <div class="row">
+                <div class="col-4">
+                    <a style="
+                    background-color: #e5e5e5;
+                    padding: 5px;
+                    padding-right: 100px;
+                    border-radius: 0px 17.5px 17.5px 0px;
+                  ">Laporan Zakat <br
+                /></a>
+                </div>
+            </div>
+            <br />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Jenis Zakat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <br />
+        </div>
+        <div class="data tab-pane fade show " id="wakaf">
+            <div class="row">
+                <div class="col-4">
+                    <a style="
+                    background-color: #e5e5e5;
+                    padding: 5px;
+                    padding-right: 100px;
+                    border-radius: 0px 17.5px 17.5px 0px;
+                  ">Laporan Wakaf <br
+                /></a>
+                </div>
+            </div>
+            <br />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Jumlah</th>
+                        <th scope="col">Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+        </div>
+        <div class="data tab-pane fade show " id="shodaqoh">
+            <div class="row">
+                <div class="col-4">
+                    <a style="
+                    background-color: #e5e5e5;
+                    padding: 5px;
+                    padding-right: 100px;
+                    border-radius: 0px 17.5px 17.5px 0px;
+                  ">Laporan Shodaqoh <br
+                /></a>
+                </div>
+            </div>
+            <br />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Jumlah</th>
+                        <th scope="col">tanggal</th>
+                        <th scope="col">Jenis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+        </div>
+        <div class="data tab-pane fade show " id="donasi">
+            <div class="row">
+                <div class="col-4">
+                    <a style="
+                    background-color: #e5e5e5;
+                    padding: 5px;
+                    padding-right: 100px;
+                    border-radius: 0px 17.5px 17.5px 0px;
+                  ">Laporan Donasi <br
+                /></a>
+                </div>
+            </div>
+            <br />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Jumlah</th>
+                        <th scope="col">Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+        </div>
     </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 {% endblock content %}
