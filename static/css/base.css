@@ -95,6 +95,8 @@ tr {
     font-size: 15px;
     font-family: "Mulish";
 }
+
+
 /*Ini Main konten Beranda*/
 
 .beranda1 {
@@ -198,6 +200,8 @@ tr {
     background: linear-gradient(180deg, rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%);
     mix-blend-mode: normal;
 }
+
+
 /* Ini buat Laporan */
 
 .laporan-tab li .active {
@@ -236,6 +240,8 @@ tr {
     display: flex;
     justify-content: space-around;
 }
+
+
 /* css untuk jadwal */
 
 .beranda3 ul {
@@ -276,6 +282,8 @@ tr {
 .card-jadwal .col .bold {
     font-weight: bold;
 }
+
+
 /* Ini css buatfooter */
 
 ul {
@@ -412,8 +420,7 @@ left: 200px; */
 }
 
 .pembatasSlide3 {
-    border-left: 10px solid #007320;
-    height: 80px;
+    border: 10px solid #007320;
 }
 
 .pembatasSlide3card {
