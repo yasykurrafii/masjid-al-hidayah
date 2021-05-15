@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="col-md-8 playfair float-end">
-        <h2>Pantau Jadwal Kegiatan <br />Masjid Al-Hidayah disini</h2>
+        <h2 class="d-none d-md-block" >Pantau Jadwal Kegiatan <br />Masjid Al-Hidayah disini</h2>
         <br />
         <div class="tab-content flex-center">
           <div class="data tab-pane fade show active" id="jadwal-kajian">
@@ -81,6 +81,7 @@
                 </div>
                 <br /> {% endfor %}
                 <br />
+
                 <div class="row">
                     <div class="col-4">
                         <a class="d-none d-lg-block" style="
@@ -94,108 +95,94 @@
                     </div>
                 </div>
                 <br /> {% for data in jadwalLewat%}
+
                 <!-- For loop buat nampilin data dari database-->
-                <div class="card shadow p-3" style="background-color: #e5e5e5">
-                    <div class="row">
-                        <div class="col" style="text-align: center; margin-left: -200px">
+                <div class="card mb-3 shadow card-jadwal">
+                    <div class="row g-0">
+                        <div class="col-md-2 align-self-center text-center ">
                             <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
                             <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
                         </div>
-                        <div class="col pembatasSlide3card" style="margin-left: -200px"></div>
-                        <div class="col" style="margin-left: -550px">
-                            <h5 class="card-title" style="color: #676666">{{data.title}}</h5>
-                            {% if data.online%}
-                            <a class="btn btn-primary" style="
-                      background-color: #fcc740;
-                      color: black;
-                      border: none;
-                      font-size: 10px;
-                    ">KAJIAN ONLINE</a
-                  >
-                  {% endif %}
-                  <h5 class="card-title">{{data.penceramah}}</h5>
-                  <div class="row" style="color: #888888">
-                    <i class="fas fa-clock"></i>
-                    <a
-                      class="card-text"
-                      style="color: #888888; text-decoration: none"
-                      >{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}<br
-                    /></a>
+                        <div class="col-md-10 border-start border-success text-start" style="border: #007320;">
+                            <div class="card-body">
+                                <h5 class="card-title bold" style="color: #007320;">{{data.title}}</h5>
+                                {% if data.online%}
+                                <a class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> {% endif %}
+                                <div class="playfair">
+                                    <h5 class="card-title">{{data.penceramah}}</h5>
+                                    <div class="row" style="color: #888888">
+                                        <a class="card-text" style="color: #888888; text-decoration: none">
+                                            <ion-icon name="time-outline"></ion-icon>{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}
+                                            <br/>
+                                        </a>
+                                    </div>
+                                    <div class="row" style="color: #888888">
+                                        <a class="card-text" style="color: #888888; text-decoration: none">
+                                            <ion-icon name="location"></ion-icon>Masjid Al-Hidayah
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="row" style="color: #888888">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <a class="card-text" style="color: #888888; text-decoration: none">Masjid Al-Hidayah</a
-                    >
-                  </div>
+                    </div>
                 </div>
-              </div>
+                <br /> {% endfor %}
+                <br />
             </div>
-            <br />
-            {% endfor %}
-            <br />
-          </div>
-          <div class="data tab-pane fade show" id="jadwal-jumat">
-            <div class="row">
-              <div class="col-4">
-                <a
-                  style="
+            <div class="data tab-pane fade show" id="jadwal-jumat">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="d-none d-lg-block" style="
                     background-color: #e5e5e5;
                     padding: 5px;
                     padding-right: 100px;
                     border-radius: 0px 17.5px 17.5px 0px;
-                  "
-                  >Khatib Bulan ini <br
+                    color: black;
+                    font-weight: bold;
+                  ">Khatib Bulan ini <br
                 /></a>
+                    </div>
+                </div>
+                <br /> {% for data in jadwal%}
+                <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
+                <div class="card mb-3 shadow card-jadwal">
+                    <div class="row g-0">
+                        <div class="col-md-2 align-self-center text-center ">
+                            <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
+                            <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
+                        </div>
+                        <div class="col-md-10 border-start border-success text-start" style="border: #007320;">
+                            <div class="card-body">
+                                <h5 class="card-title bold" style="color: #007320;">{{data.title}}</h5>
+                                {% if data.online%}
+                                <a class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> {% endif %}
+                                <div class="playfair">
+                                    <h5 class="card-title">{{data.penceramah}}</h5>
+                                    <div class="row" style="color: #888888">
+                                        <a class="card-text" style="color: #888888; text-decoration: none">
+                                            <ion-icon name="time-outline"></ion-icon>{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}
+                                            <br/>
+                                        </a>
+                                    </div>
+                                    <div class="row" style="color: #888888">
+                                        <a class="card-text" style="color: #888888; text-decoration: none">
+                                            <ion-icon name="location"></ion-icon>Masjid Al-Hidayah
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                    <br /> {% for data in jadwal%}
-                    <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
-                    <div class="card shadow p-3">
-                        <div class="row">
-                            <div class="col" style="text-align: center; margin-left: -200px">
-                                <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
-                                <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
-                            </div>
-                            <div class="col pembatasSlide3card" style="margin-left: -200px"></div>
-                            <div class="col" style="margin-left: -550px">
-                                <h5 class="card-title" style="color: #007320">
-                                    {{data.title}}
-                                </h5>
-                                {% if data.online%}
-                                <a class="btn btn-primary" style="
-                      background-color: #fcc740;
-                      color: black;
-                      border: none;
-                      font-size: 10px;
-                    ">KAJIAN ONLINE</a
-                  >
-                  {% endif %}
-                  <h5 class="card-title">{{data.penceramah}}</h5>
-                  <div class="row" style="color: #888888">
-                    <i class="fas fa-clock"></i>
-                    <a
-                      class="card-text"
-                      style="color: #888888; text-decoration: none"
-                      >{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}<br
-                    /></a>
-                            </div>
-                            <div class="row" style="color: #888888">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <a class="card-text" style="color: #888888; text-decoration: none">Masjid Al-Hidayah</a
-                    >
-                  </div>
                 </div>
-              </div>
+                <br /> {% endfor %}
+                <br />
+                <br />
             </div>
-            <!-- Ini akhir cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
-            <br />
-            {% endfor %}
-            <br />
-            <br />
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+</div>
 </div>
 {% endblock content %}
