@@ -59,7 +59,7 @@
                             <div class="card-body">
                                 <h5 class="card-title bold" style="color: #007320;">{{data.title}}</h5>
                                 {% if data.online%}
-                                <a class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> {% endif %}
+                                <a href='{{data.link}}' class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> {% endif %}
                                 <div class="playfair">
                                     <h5 class="card-title">{{data.penceramah}}</h5>
                                     <div class="row" style="color: #888888">
@@ -107,7 +107,7 @@
                             <div class="card-body">
                                 <h5 class="card-title bold" style="color: #007320;">{{data.title}}</h5>
                                 {% if data.online%}
-                                <a class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> {% endif %}
+                                <a class="btn btn-primary bold disabled" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> {% endif %}
                                 <div class="playfair">
                                     <h5 class="card-title">{{data.penceramah}}</h5>
                                     <div class="row" style="color: #888888">

@@ -10,5 +10,7 @@ admin.site.register(ZakatModel)
 admin.site.register(ShodaqohModel)
 admin.site.register(DonasiModel)
 admin.site.register(JenisShodaqoh)
+admin.site.register(WakafModel)
+admin.site.register(KegiatanModel)
 
 

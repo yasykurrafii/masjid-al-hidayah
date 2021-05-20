@@ -26,6 +26,7 @@ class JadwalModel(models.Model):
     title = models.CharField(max_length=100)
     penceramah = models.ForeignKey(PenceramahModel, on_delete=models.CASCADE)
     online = models.BooleanField()
+    link = models.CharField(max_length=300, null=True)
 
     def __str__(self):
         return self.title + ' | ' + str(self.penceramah)
@@ -36,7 +37,7 @@ class InfaqModel(models.Model):
     nama = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.tanggal + ' | ' + self.nama
+        return str(self.tanggal) + ' | ' + self.nama
 
 class ZakatModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
@@ -45,7 +46,7 @@ class ZakatModel(models.Model):
     jenis = models.ForeignKey(JenisZakatModel, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.tanggal + ' | ' + self.nama + ' | ' + self.jenis
+        return str(self.tanggal) + ' | ' + self.nama + ' | ' + str(self.jenis)
 
 class ShodaqohModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
@@ -54,7 +55,7 @@ class ShodaqohModel(models.Model):
     jenis = models.ForeignKey(JenisShodaqoh, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.tanggal + ' | ' + self.nama + ' | ' + self.jenis
+        return str(self.tanggal) + ' | ' + self.nama + ' | ' + str(self.jenis)
 
 class DonasiModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
@@ -62,4 +63,22 @@ class DonasiModel(models.Model):
     nama = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.tanggal + ' | ' + self.nama
+        return str(self.tanggal) + ' | ' + self.nama
+
+class WakafModel(models.Model):
+    tanggal = models.DateField(auto_now_add=False)
+    jumlah = models.IntegerField()
+    nama = models.CharField(max_length=100)
+
+    def __str__(self):
+        return str(self.tanggal) + ' | ' + self.nama
+
+class KegiatanModel(models.Model):
+    kegiatan = models.CharField(max_length=200)
+    tanggal_kegiatan = models.DateField(auto_now=False, auto_now_add=False)
+    deskripsi = models.TextField()
+    thumbnail = models.ImageField(upload_to='thumbnail/%Y/%m/%d/')
+    link = models.CharField(max_length=500, default='https://www.google.com/')
+
+    def __str__(self):
+        return self.kegiatan + ' | ' + str(self.tanggal_kegiatan)

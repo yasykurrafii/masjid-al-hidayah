@@ -82,7 +82,7 @@
                 <div class="tab-pane fade show active content" id="infaq">
                     <div class="total">
                         <h1><strong>Laporan Saldo Infaq : </strong></h1>
-                        <h1 id="number">Rp 8.540.000,-</h1>
+                        <h1 id="number">Rp {{infaq.jumlah__sum}},-</h1>
                     </div>
                     <div class="details ">
                         <div class="norek">
@@ -100,7 +100,7 @@
                 <div class="tab-pane fade show" id="zakat">
                     <div class="total">
                         <h1><strong>Laporan Saldo Zakat : </strong></h1>
-                        <h1 id="number">Rp 8.540.000,-</h1>
+                        <h1 id="number">Rp {{zakat.total__sum}},-</h1>
                     </div>
                     <div class="details ">
                         <div class="norek">
@@ -118,7 +118,7 @@
                 <div class="tab-pane fade show" id="wakaf">
                     <div class="total">
                         <h1><strong>Laporan Saldo Wakaf : </strong></h1>
-                        <h1 id="number">Rp 8.540.000,-</h1>
+                        <h1 id="number">Rp {{wakaf.jumlah__sum}},-</h1>
                     </div>
                     <div class="details ">
                         <div class="norek">
@@ -136,7 +136,7 @@
                 <div class="tab-pane fade show" id="shodaqoh">
                     <div class="total">
                         <h1><strong>Laporan Saldo Shodaqoh : </strong></h1>
-                        <h1 id="number">Rp 8.540.000,-</h1>
+                        <h1 id="number">Rp {{shodaqoh.total__sum}},-</h1>
                     </div>
                     <div class="details ">
                         <div class="norek">
@@ -154,7 +154,7 @@
                 <div class="tab-pane fade show" id="donasi">
                     <div class="total">
                         <h1><strong>Laporan Saldo Donasi : </strong></h1>
-                        <h1 id="number">Rp 8.540.000,-</h1>
+                        <h1 id="number">Rp {{donasi.jumlah__sum}},-</h1>
                     </div>
                     <div class="details ">
                         <div class="norek">
@@ -233,7 +233,8 @@
                             <div class="card-body">
                                 <h5 class="card-title bold" style="color: #007320;">{{data.title}}</h5>
                                 {% if data.online%}
-                                <a class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> {% endif %}
+                                <a href='{{data.link}}' class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> 
+                                {% endif %}
                                 <div class="playfair">
                                     <h5 class="card-title">{{data.penceramah}}</h5>
                                     <div class="row" style="color: #888888">

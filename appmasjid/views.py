@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
+from django.db.models import Sum
 import datetime
 import requests
 from .models import *
@@ -26,7 +27,13 @@ def fetch_solat():
 def index(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
+    today = datetime.date(date.year, date.month, date.day)
     jadwal = JadwalModel.objects.all()[:5]
+    infaq = InfaqModel.objects.aggregate(Sum('jumlah'))
+    zakat = ZakatModel.objects.aggregate(Sum('total'))
+    wakaf = WakafModel.objects.aggregate(Sum('jumlah'))
+    donasi = DonasiModel.objects.aggregate(Sum('jumlah'))
+    shodaqoh = ShodaqohModel.objects.aggregate(Sum('total'))
     return render(request, 'home.html', {'date': now,
                                          'jadwal': jadwal,
                                          'subuh': solat['Fajr'],
@@ -34,7 +41,8 @@ def index(request):
                                          'ashr': solat['Asr'],
                                          'maghrib': solat['Maghrib'],
                                          'isya': solat['Isha'],
-                                         'navhome' : 'active'})
+                                         'navhome' : 'active',
+                                         'infaq': infaq,'zakat': zakat,'wakaf': wakaf,'donasi': donasi,'shodaqoh': shodaqoh})
 
 
 def jadwal(request):
@@ -63,12 +71,20 @@ def jadwal(request):
 def laporan(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
+    infaq = InfaqModel.objects.all()
+    zakat = ZakatModel.objects.all()
+    wakaf = WakafModel.objects.all()
+    shodaqoh = ShodaqohModel.objects.all()
+    donasi = DonasiModel.objects.all()
     return render(request, 'laporan.html', {'date': now, 'subuh': solat['Fajr'],
                                             'dzuhur': solat['Dhuhr'],
                                             'ashr': solat['Asr'],
                                             'maghrib': solat['Maghrib'],
                                             'isya': solat['Isha'],
-                                            'navlaporan' : 'active'})
+                                            'navlaporan' : 'active',
+                                            'infaq': infaq, 'zakat':zakat,
+                                            'wakaf':wakaf,'shodaqoh':shodaqoh,
+                                            'donasi':donasi})
 
 
 def informasi(request):
