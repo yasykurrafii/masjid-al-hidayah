@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class PenceramahModel(models.Model):
     penceramah = models.CharField(max_length=100)
@@ -7,11 +8,12 @@ class PenceramahModel(models.Model):
     def __str__(self):
         return self.penceramah
 
-class JenisZakatModel(models.Model):
-    jenis = models.CharField(max_length=100)
+class ImamModel(models.Model):
+    nama = models.CharField(max_length=200)
+    foto = models.ImageField(upload_to='static/ustad/')
 
     def __str__(self):
-        return self.jenis
+        return self.nama
 
 class JenisShodaqoh(models.Model):
     jenis = models.CharField(max_length=50)
@@ -40,10 +42,14 @@ class InfaqModel(models.Model):
         return str(self.tanggal) + ' | ' + self.nama
 
 class ZakatModel(models.Model):
+    choices = (
+        ('Maal', 'Maal'),
+        ('Fitrah', 'Fitrah')
+    )
     tanggal = models.DateField(auto_now_add=False)
     nama = models.CharField(max_length=100)
     total = models.IntegerField()
-    jenis = models.ForeignKey(JenisZakatModel, on_delete=models.CASCADE)
+    jenis = models.CharField(choices=choices, max_length=10)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama + ' | ' + str(self.jenis)
@@ -77,8 +83,16 @@ class KegiatanModel(models.Model):
     kegiatan = models.CharField(max_length=200)
     tanggal_kegiatan = models.DateField(auto_now=False, auto_now_add=False)
     deskripsi = models.TextField()
-    thumbnail = models.ImageField(upload_to='thumbnail/%Y/%m/%d/')
+    thumbnail = models.ImageField(upload_to='static/thumbnail/')
     link = models.CharField(max_length=500, default='https://www.google.com/')
+    upload = models.DateField(auto_now=True, editable=False)
 
     def __str__(self):
-        return self.kegiatan + ' | ' + str(self.tanggal_kegiatan)
+        return self.kegiatan  + ' | uploaded: ' + str(self.upload)
+
+class LayananModel(models.Model):
+    nama = models.CharField(max_length=20)
+    no_telp = models.CharField(max_length=12)
+
+    def __str__(self):
+        self.nama + ' | ' + str(self.no_telp)

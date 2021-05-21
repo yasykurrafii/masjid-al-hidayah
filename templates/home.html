@@ -87,7 +87,7 @@
                     <div class="details ">
                         <div class="norek">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros vitae erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel leo dignissim,
+                              Jika Ingin melakukan Infaq dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri<br/> 713 371 2307  an/ gatau siapa </b>
                             </p>
                         </div>
                         <div class="d-none d-lg-block div-laporan">
@@ -105,7 +105,7 @@
                     <div class="details ">
                         <div class="norek">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros vitae erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel leo dignissim,
+                              Jika Ingin melakukan Zakat dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri <br/> 713 371 2307  an/ gatau siapa</b>
                             </p>
                         </div>
                         <div class="div-laporan">
@@ -123,7 +123,7 @@
                     <div class="details ">
                         <div class="norek">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros vitae erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel leo dignissim,
+                              Jika Ingin melakukan Wakaf dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri<br/> 713 371 2307  an/ gatau siapa </b>
                             </p>
                         </div>
                         <div class="div-laporan">
@@ -141,7 +141,7 @@
                     <div class="details ">
                         <div class="norek">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros vitae erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel leo dignissim,
+                              Jika Ingin melakukan Shodaqoh dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri<br/> 713 371 2307  an/ gatau siapa </b>
                             </p>
                         </div>
                         <div class="div-laporan">
@@ -159,7 +159,7 @@
                     <div class="details ">
                         <div class="norek">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eros vitae erat dapibus faucibus semper sed elit. Curabitur pellentesque velit vel leo dignissim,
+                              Jika Ingin melakukan Donasi dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri<br/> 713 371 2307  an/ gatau siapa </b>
                             </p>
                         </div>
                         <div class="div-laporan">
@@ -450,86 +450,31 @@
 <br>
       <!--row gambar kegiatan yang bisa di hover-->
       <!--Coba cards baru dari yt-->
-      <div class="col-md-12">
+      
+      {% for data in kegiatan %}
+        <div class="col-md-12">
         <div class="row">
           <div class="containercardSlide4">
             <!--Kegiatan 1-->
             <div class="cardSlide4">
               <div class="imgBx">
-                <img src="../static/img/fotoSlide5Qurban.png" />
+                <img src="{{data.thumbnail.url}}" />
               </div>
               <div class="kontenSlide4">
                 <h2>Qurban</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam
+                  {{data.deskripsi}}
                 </p>
-                <a href="#" class="btn btn-success shadow">Selengkapnya</a>
+                <a href="{{data.link}}" target="_blank" class="btn btn-success shadow">Selengkapnya</a>
     </div>
+      {% endfor %}
+        
+      
 
 </div>
 <!--Kegiatan 1-->
 
-<!--Kegiatan 2-->
-<div class="cardSlide4">
-    <div class="imgBx">
-        <img src="../static/img/fotoSlide5Tarawih.png" />
-    </div>
-    <div class="kontenSlide4">
-        <h2>Tarawih</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-        </p>
-        <a href="#" class="btn btn-success shadow">Selengkapnya</a>
-    </div>
-</div>
-<!--Kegiatan 2-->
 
-<!--Kegiatan 3-->
-<div class="cardSlide4">
-    <div class="imgBx">
-        <img src="../static/img/fotoSlide5Jumatan.png" />
-    </div>
-    <div class="kontenSlide4">
-        <h2>Jumatan</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-        </p>
-        <a href="#" class="btn btn-success shadow">Selengkapnya</a>
-    </div>
-</div>
-<!--Kegiatan 3-->
-
-<!--Kegiatan 4-->
-<div class="cardSlide4">
-    <div class="imgBx">
-        <img src="../static/img/fotoSlide5Kajian.png" />
-    </div>
-    <div class="kontenSlide4">
-        <h2>Kajian</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-        </p>
-        <a href="#" class="btn btn-success shadow">Selengkapnya</a>
-    </div>
-</div>
-<!--Kegiatan 4-->
-
-<!--Kegiatan 5-->
-<div class="cardSlide4">
-    <div class="imgBx">
-        <img src="../static/img/fotoSlide5TPQ.png" />
-    </div>
-    <div class="kontenSlide4">
-        <h2>TPQ</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-        </p>
-        <a href="#" class="btn btn-success shadow">Selengkapnya</a>
-    </div>
-</div>
-<!--Kegiatan 5-->
 </div>
 </div>
 </div>

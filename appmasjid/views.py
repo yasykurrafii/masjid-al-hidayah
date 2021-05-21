@@ -27,13 +27,13 @@ def fetch_solat():
 def index(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
-    today = datetime.date(date.year, date.month, date.day)
     jadwal = JadwalModel.objects.all()[:5]
     infaq = InfaqModel.objects.aggregate(Sum('jumlah'))
     zakat = ZakatModel.objects.aggregate(Sum('total'))
     wakaf = WakafModel.objects.aggregate(Sum('jumlah'))
     donasi = DonasiModel.objects.aggregate(Sum('jumlah'))
     shodaqoh = ShodaqohModel.objects.aggregate(Sum('total'))
+    kegiatan = KegiatanModel.objects.all()
     return render(request, 'home.html', {'date': now,
                                          'jadwal': jadwal,
                                          'subuh': solat['Fajr'],
@@ -42,7 +42,8 @@ def index(request):
                                          'maghrib': solat['Maghrib'],
                                          'isya': solat['Isha'],
                                          'navhome' : 'active',
-                                         'infaq': infaq,'zakat': zakat,'wakaf': wakaf,'donasi': donasi,'shodaqoh': shodaqoh})
+                                         'infaq': infaq,'zakat': zakat,'wakaf': wakaf,'donasi': donasi,'shodaqoh': shodaqoh,
+                                         'kegiatan': kegiatan})
 
 
 def jadwal(request):
@@ -90,9 +91,11 @@ def laporan(request):
 def informasi(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
+    imam = ImamModel.objects.all()
     return render(request, 'informasi.html', {'date': now, 'subuh': solat['Fajr'],
                                               'dzuhur': solat['Dhuhr'],
                                               'ashr': solat['Asr'],
                                               'maghrib': solat['Maghrib'],
                                               'isya': solat['Isha'],
-                                              'navinformasi' : 'active'})
+                                              'navinformasi' : 'active',
+                                              'imam' : imam})
