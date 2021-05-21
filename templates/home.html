@@ -451,10 +451,11 @@
       <!--row gambar kegiatan yang bisa di hover-->
       <!--Coba cards baru dari yt-->
       
-      {% for data in kegiatan %}
+      
         <div class="col-md-12">
         <div class="row">
           <div class="containercardSlide4">
+            {% for data in kegiatan %}
             <!--Kegiatan 1-->
             <div class="cardSlide4">
               <div class="imgBx">
@@ -466,12 +467,9 @@
                   {{data.deskripsi}}
                 </p>
                 <a href="{{data.link}}" target="_blank" class="btn btn-success shadow">Selengkapnya</a>
-    </div>
-      {% endfor %}
-        
-      
-
-</div>
+              </div>
+        </div>
+        {% endfor %}
 <!--Kegiatan 1-->
 
 
