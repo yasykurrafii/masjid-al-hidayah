@@ -233,7 +233,7 @@
                             <div class="card-body">
                                 <h5 class="card-title bold" style="color: #007320;">{{data.title}}</h5>
                                 {% if data.online%}
-                                <a href='{{data.link}}' class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> 
+                                <a href='{{data.link}}' target="_blank" class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> 
                                 {% endif %}
                                 <div class="playfair">
                                     <h5 class="card-title">{{data.penceramah}}</h5>
@@ -287,7 +287,7 @@
                   /></a>
             </div>
         </div>
-        <br /> {% for data in jadwal%}
+        <br /> {% for data in jumat%}
         <!-- Ini awal cards kedua yang 10 maret Adab Duduk dan Bermajelis-->
         <div class="card mb-3 shadow card-jadwal">
             <div class="row g-0">
@@ -296,25 +296,19 @@
                     <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
                 </div>
                 <div class="col-md-10 border-start border-success text-start" style="border: #007320;">
-                    <div class="card-body">
-                        <h5 class="card-title bold" style="color: #007320;">{{data.title}}</h5>
-                        {% if data.online%}
-                        <a class="btn btn-primary bold" style="background-color: #fcc740; color: black; border: none; font-size: 10px;">KAJIAN ONLINE</a> {% endif %}
-                        <div class="playfair">
-                            <h5 class="card-title">{{data.penceramah}}</h5>
-                            <div class="row" style="color: #888888">
-                                <a class="card-text" style="color: #888888; text-decoration: none">
-                                    <ion-icon name="time-outline"></ion-icon>{{data.tanggal|date:"H:i"}}-{{data.selesai|date:'G:i'}}
-                                    <br/>
-                                </a>
-                            </div>
-                            <div class="row" style="color: #888888">
-                                <a class="card-text" style="color: #888888; text-decoration: none">
-                                    <ion-icon name="location"></ion-icon>Masjid Al-Hidayah
-                                </a>
-                            </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <div class="playfair khatib">
+                          <h5 class="card-title bold" style="color: #007320;">Khatib</h5>
+                          <h5 class="card-title">{{data.khatib}}</h5>
                         </div>
-
+                        <div class="playfair khatib">
+                          <h5 class="card-title bold" style="color: #007320;">Imam</h5>
+                          <h5 class="card-title">{{data.imam}}</h5>
+                        </div>
+                        <div class="playfair khatib">
+                          <h5 class="card-title bold" style="color: #007320;">Muadzin</h5>
+                          <h5 class="card-title">{{data.muadzin}}</h5>
+                        </div>
                     </div>
                 </div>
             </div>

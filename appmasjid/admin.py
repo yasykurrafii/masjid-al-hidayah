@@ -13,5 +13,6 @@ admin.site.register(WakafModel)
 admin.site.register(KegiatanModel)
 admin.site.register(LayananModel)
 admin.site.register(ImamModel)
+admin.site.register(JadwalJumatModel)
 
 

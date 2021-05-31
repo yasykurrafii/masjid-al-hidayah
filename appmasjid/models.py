@@ -96,3 +96,21 @@ class LayananModel(models.Model):
 
     def __str__(self):
         self.nama + ' | ' + str(self.no_telp)
+
+class JadwalJumatModel(models.Model):
+    """Model definition for JadwalJumatModel."""
+
+    # TODO: Define fields here
+    tanggal = models.DateField(auto_now=False, auto_now_add=False)
+    khatib = models.CharField( max_length=100)
+    imam = models.CharField( max_length=100)
+    muadzin = models.CharField( max_length=100)
+    class Meta:
+        """Meta definition for JadwalJumatModel."""
+
+        verbose_name = 'Jadwal Jumat'
+        verbose_name_plural = 'Jadwal Jumat'
+
+    def __str__(self):
+        """Unicode representation of JadwalJumatModel."""
+        return str(self.tanggal)
