@@ -97,7 +97,7 @@
                 <br /> {% for data in jadwalLewat%}
 
                 <!-- For loop buat nampilin data dari database-->
-                <div class="card mb-3 shadow card-jadwal"  style="background-color: #E5E5E5;">
+                <div class="card mb-3 shadow card-jadwal" style="background-color: #E5E5E5;">
                     <div class="row g-0">
                         <div class="col-md-2 align-self-center text-center ">
                             <h1 class="card-title">{{data.tanggal|date:"d"}}</h1>
@@ -127,7 +127,9 @@
                         </div>
                     </div>
                 </div>
+
                 <br /> {% endfor %}
+                <h6 style="font-size: 15px; text-align: right;"><span style="color: red;">**</span>Data dapat berubah sewaktu-waktu</h6>
                 <br />
             </div>
             <div class="data tab-pane fade show" id="jadwal-jumat">
@@ -153,27 +155,36 @@
                             <h3 class="card-title">{{data.tanggal|date:"F"}}</h3>
                         </div>
                         <div class="col-md-10 border-start border-success text-start" style="border: #007320;">
-                            <div class="card-body d-flex justify-content-between">
-                                <div class="playfair khatib">
-                                  <h5 class="card-title bold" style="color: #007320;">Khatib</h5>
-                                  <h5 class="card-title">{{data.khatib}}</h5>
+                            <div class="row">
+                                <div class="card-body">
+                                    <div class="text-center playfair khatib">
+                                        <h5 class="card-title bold" style="color: #007320;">Khatib</h5>
+                                        <h5 class="card-title">{{data.khatib}}</h5>
+                                        <h5 class="card-title bold" style="color: #007320;">Tema</h5>
+                                        <h5 class="card-title">Menyambut bulan yang penuh berkah</h5>
+                                    </div>
+
                                 </div>
-                                <div class="playfair khatib">
-                                  <h5 class="card-title bold" style="color: #007320;">Imam</h5>
-                                  <h5 class="card-title">{{data.imam}}</h5>
-                                </div>
-                                <div class="playfair khatib">
-                                  <h5 class="card-title bold" style="color: #007320;">Muadzin</h5>
-                                  <h5 class="card-title">{{data.muadzin}}</h5>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="playfair khatib">
+                                        <h5 class="card-title bold" style="color: #007320;">Imam</h5>
+                                        <h5 class="card-title">{{data.imam}}</h5>
+                                    </div>
+                                    <div class="text-end playfair khatib">
+                                        <h5 class="card-title bold" style="color: #007320;">Muadzin</h5>
+                                        <h5 class="card-title">{{data.muadzin}}</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <h6 style="font-size: 15px; text-align: right;"><span style="color: red;">**</span>Data dapat berubah sewaktu-waktu</h6>
                 <br /> {% endfor %}
                 <br />
                 <br />
             </div>
+
         </div>
     </div>
 </div>
