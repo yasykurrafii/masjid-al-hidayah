@@ -62,20 +62,18 @@
                 <table class="table shadow bg-light align-middle">
                     <thead class="table-success">
                         <tr>
-                            <th scope="col">No</th>
+                            <th scope="col">Tanggal</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Jumlah</th>
-                            <th scope="col">Tanggal</th>
                         </tr>
                     </thead>
                     <tbody>
 
                         {% for data in infaq %}
                         <tr>
-                            <th scope="row">{{data.id}}</th>
-                            <td>{{data.nama}}</td>
-                            <td>Rp {{data.jumlah}}</td>
                             <td>{{data.tanggal}}</td>
+                            <td>{{data.nama}}</td>
+                            <td>Rp.{{data.jumlah}}</td>
                         </tr>
                         {% endfor %}
 
@@ -96,10 +94,10 @@
                     <a class="d-none d-lg-block" style="
                     background-color: #e5e5e5;
                     padding: 5px;
-                    padding-right: 100px;
+             
+                    font-weight: bold;       padding-right: 100px;
                     border-radius: 0px 17.5px 17.5px 0px;
-                    color: black;
-                    font-weight: bold;
+                    color: bla
                   ">Laporan Zakat <br
                 /></a>
                 </div>
@@ -110,10 +108,9 @@
                 <table class="table shadow bg-light align-middle">
                     <thead class="table-success">
                         <tr>
-                            <th scope="col">No</th>
+                            <th scope="col">Tanggal</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Total</th>
-                            <th scope="col">Tanggal</th>
                             <th scope="col">Jenis Zakat</th>
                         </tr>
                     </thead>
@@ -121,10 +118,9 @@
 
                         {% for data in zakat %}
                         <tr>
-                            <th scope="row">{{data.id}}</th>
-                            <td>{{data.nama}}</td>
-                            <td>{{data.total}}</td>
                             <td>{{data.tanggal}}</td>
+                            <td>{{data.nama}}</td>
+                            <td>Rp.{{data.total}}</td>
                             <td>{{data.jenis}}</td>
                         </tr>
                         {% endfor %}
@@ -158,30 +154,19 @@
                 <table class="table shadow bg-light align-middle">
                     <thead class="table-success">
                         <tr>
-                            <th scope="col">No</th>
+                            <th scope="col">Tanggal</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Jumlah</th>
-                            <th scope="col">Tanggal</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for data in wakaf %}
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>{{data.tanggal}}</td>
+                            <td>{{data.nama}}</td>
+                            <td>Rp.{{data.jumlah}}</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table class="table-success">
             </div>
@@ -209,31 +194,21 @@
                 <table class="table shadow bg-light align-middle">
                     <thead class="table-success">
                         <tr>
-                            <th scope="col">No</th>
+                            <th scope="col">tanggal</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Jumlah</th>
-                            <th scope="col">tanggal</th>
                             <th scope="col">Jenis</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for data in shodaqoh %}
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>{{data.tanggal}}</td>
+                            <td>{{data.nama}}</td>
+                            <td>Rp.{{data.total}}</td>
+                            <td>{{data.jenis}}</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table class="table-success">
             </div>
@@ -261,30 +236,19 @@
                 <table class="table shadow bg-light align-middle">
                     <thead class="table-success">
                         <tr>
-                            <th scope="col">No</th>
+                            <th scope="col">Tanggal</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Jumlah</th>
-                            <th scope="col">Tanggal</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for data in donasi %}
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>{{data.tanggal}}</td>
+                            <td>{{data.nama}}</td>
+                            <td>Rp.{{data.jumlah}}</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table class="table-success">
                 <br>
