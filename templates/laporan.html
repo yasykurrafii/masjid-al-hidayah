@@ -11,30 +11,25 @@
                 <div class="col-md-4">
                     <ul class="nav nav-tabs flex-column">
                         <li class="nav-item mr-1 data">
-                            <a href="#infaq" class="nav-link active" data-bs-toggle="tab">Infaq</a
-              >
-            </li>
-            <li class="nav-item mr-1 data">
-              <a href="#zakat" class="nav-link" data-bs-toggle="tab">Zakat</a>
+                            <a href="#infaq" class="nav-link active" data-bs-toggle="tab">Infaq</a>
                         </li>
                         <li class="nav-item mr-1 data">
-                            <a href="#wakaf" class="nav-link" data-bs-toggle="tab">Wakaf</a
-              >
-            </li>
-            <li class="nav-item mr-1 data">
-              <a href="#shodaqoh" class="nav-link" data-bs-toggle="tab"
-                >Shodaqoh</a
-              >
-            </li>
-            <li class="nav-item mr-1 data">
-              <a href="#donasi" class="nav-link" data-bs-toggle="tab"
-                >Donasi</a
-              >
-            </li>
-          </ul>
+                            <a href="#zakat" class="nav-link" data-bs-toggle="tab">Zakat</a>
+                        </li>
+                        <li class="nav-item mr-1 data">
+                            <a href="#wakaf" class="nav-link" data-bs-toggle="tab">Wakaf</a>
+                        </li>
+                        <li class="nav-item mr-1 data">
+                            <a href="#shodaqoh" class="nav-link" data-bs-toggle="tab">Shodaqoh</a>
+                        </li>
+                        <li class="nav-item mr-1 data">
+                            <a href="#donasi" class="nav-link" data-bs-toggle="tab">Donasi</a>
+                        </li>
+                    </ul>
+                </div>
         </div>
-      </div>
 
+        
       <div class="col-md-8">
         <h2 class="d-none d-lg-block">Laporan Keuangan Masjid <br />Al-Hidayah</h2>
         <br />
@@ -59,7 +54,7 @@
             <br />
 
             <div class="table-responsive">
-                <table class="table shadow bg-light align-middle">
+                <table class="table shadow bg-light align-middle table-hover">
                     <thead class="table-success">
                         <tr>
                             <th scope="col">Tanggal</th>
@@ -70,10 +65,10 @@
                     <tbody>
 
                         {% for data in infaq %}
-                        <tr>
-                            <td>{{data.tanggal}}</td>
-                            <td>{{data.nama}}</td>
-                            <td>Rp.{{data.jumlah}}</td>
+                        <tr> <!-- Disetiap tr gua tambahin styling manual, krn ga nemu solving di bootstrap5 gimana-->
+                            <td style="word-wrap: break-word;min-width: 130px;max-width: 130px;">{{data.tanggal}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 600px;">{{data.nama}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Rp.{{data.jumlah}}</td>
                         </tr>
                         {% endfor %}
 
@@ -84,7 +79,6 @@
 
 
             </div>
-
 
             <br />
         </div>
@@ -118,10 +112,10 @@
 
                         {% for data in zakat %}
                         <tr>
-                            <td>{{data.tanggal}}</td>
-                            <td>{{data.nama}}</td>
-                            <td>Rp.{{data.total}}</td>
-                            <td>{{data.jenis}}</td>
+                            <td style="word-wrap: break-word;min-width: 130px;max-width: 130px;">{{data.tanggal}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 600px;">{{data.nama}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Rp.{{data.total}}</td>
+                            <td style="word-wrap: break-word;min-width: 130px;max-width: 130px;">{{data.jenis}}</td>
                         </tr>
                         {% endfor %}
 
@@ -162,9 +156,9 @@
                     <tbody>
                         {% for data in wakaf %}
                         <tr>
-                            <td>{{data.tanggal}}</td>
-                            <td>{{data.nama}}</td>
-                            <td>Rp.{{data.jumlah}}</td>
+                            <td style="word-wrap: break-word;min-width: 130px;max-width: 130px;">{{data.tanggal}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 600px;">{{data.nama}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Rp.{{data.jumlah}}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -203,10 +197,10 @@
                     <tbody>
                         {% for data in shodaqoh %}
                         <tr>
-                            <td>{{data.tanggal}}</td>
-                            <td>{{data.nama}}</td>
-                            <td>Rp.{{data.total}}</td>
-                            <td>{{data.jenis}}</td>
+                            <td style="word-wrap: break-word;min-width: 130px;max-width: 130px;">{{data.tanggal}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 600px;">{{data.nama}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Rp.{{data.total}}</td>
+                            <td style="word-wrap: break-word;min-width: 130px;max-width: 130px;">{{data.jenis}}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -244,9 +238,9 @@
                     <tbody>
                         {% for data in donasi %}
                         <tr>
-                            <td>{{data.tanggal}}</td>
-                            <td>{{data.nama}}</td>
-                            <td>Rp.{{data.jumlah}}</td>
+                            <td style="word-wrap: break-word;min-width: 130px;max-width: 130px;">{{data.tanggal}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 600px;">{{data.nama}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Rp.{{data.jumlah}}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

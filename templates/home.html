@@ -45,7 +45,7 @@
 <!-- Slide 1 -->
 
 <!-- Slide 2 -->
-<div class="container-fluid vertical-center beranda2 ">
+<div class="container-fluid vertical-center beranda2 d-none d-xl-block"> <!-- Gua out of idea kur, jadi gua none aja yak-->
     <h1>INFORMASI LAPORAN</h1>
     <div class="col-md-9 mx-auto " style="position: relative">
         <div class="tab laporan-tab">
@@ -79,7 +79,7 @@
         </div>
         <div class="detail-laporan">
             <div class="tab-content flex-center">
-                <div class="tab-pane fade show active content" id="infaq">
+                <div class="tab-pane fade show pb-5 active content" id="infaq"> 
                     <div class="total">
                         <h1><strong>Laporan Saldo Infaq : </strong></h1>
                         <h1 id="number">Rp {{infaq.jumlah__sum}},-</h1>
@@ -90,14 +90,14 @@
                                 Jika Ingin melakukan Infaq dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri<br/> 713 371 2307  an/ gatau siapa </b>
                             </p>
                         </div>
-                        <div class="d-none d-lg-block div-laporan">
+                        <div class="d-none d-lg-block div-laporan pb-5">
                             <button class="btn btn-secondary btn-laporan">
-                <a href="{% url 'laporan' %}"> Lihat Laporan Lengkap </a>
-              </button>
+                              <a href="{% url 'laporan' %}"> Lihat Laporan Lengkap </a>
+                              </button>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade show" id="zakat">
+                <div class="tab-pane fade show pb-5" id="zakat">
                     <div class="total">
                         <h1><strong>Laporan Saldo Zakat : </strong></h1>
                         <h1 id="number">Rp {{zakat.total__sum}},-</h1>
@@ -108,14 +108,14 @@
                                 Jika Ingin melakukan Zakat dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri <br/> 713 371 2307  an/ gatau siapa</b>
                             </p>
                         </div>
-                        <div class="div-laporan">
+                        <div class="div-laporan pb-5">
                             <button class="btn btn-secondary btn-laporan">
                 <a href="{% url 'laporan' %}"> Lihat Laporan Lengkap </a>
               </button>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade show" id="wakaf">
+                <div class="tab-pane fade show pb-5" id="wakaf">
                     <div class="total">
                         <h1><strong>Laporan Saldo Wakaf : </strong></h1>
                         <h1 id="number">Rp {{wakaf.jumlah__sum}},-</h1>
@@ -126,14 +126,14 @@
                                 Jika Ingin melakukan Wakaf dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri<br/> 713 371 2307  an/ gatau siapa </b>
                             </p>
                         </div>
-                        <div class="div-laporan">
+                        <div class="div-laporan pb-5">
                             <button class="btn btn-secondary btn-laporan">
                 <a href="{% url 'laporan' %}"> Lihat Laporan Lengkap </a>
               </button>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade show" id="shodaqoh">
+                <div class="tab-pane fade show pb-5" id="shodaqoh">
                     <div class="total">
                         <h1><strong>Laporan Saldo Shodaqoh : </strong></h1>
                         <h1 id="number">Rp {{shodaqoh.total__sum}},-</h1>
@@ -144,14 +144,14 @@
                                 Jika Ingin melakukan Shodaqoh dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri<br/> 713 371 2307  an/ gatau siapa </b>
                             </p>
                         </div>
-                        <div class="div-laporan">
+                        <div class="div-laporan pb-5">
                             <button class="btn btn-secondary btn-laporan">
                 <a href="{% url 'laporan' %}"> Lihat Laporan Lengkap </a>
               </button>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade show" id="donasi">
+                <div class="tab-pane fade show pb-5" id="donasi">
                     <div class="total">
                         <h1><strong>Laporan Saldo Donasi : </strong></h1>
                         <h1 id="number">Rp {{donasi.jumlah__sum}},-</h1>
@@ -162,7 +162,7 @@
                                 Jika Ingin melakukan Donasi dapat dikirim melalui:<br/><br/> <b>Bank Syariah Mandiri<br/> 713 371 2307  an/ gatau siapa </b>
                             </p>
                         </div>
-                        <div class="div-laporan">
+                        <div class="div-laporan pb-5">
                             <button class="btn btn-secondary btn-laporan">
                 <a href="{% url 'laporan' %}"> Lihat Laporan Lengkap </a>
               </button>
