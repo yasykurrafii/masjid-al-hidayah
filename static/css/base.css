@@ -103,7 +103,7 @@ tr {
 .beranda1 {
     padding: auto;
     margin: auto;
-    background-image: url("../img/fotoHome.png");
+    background-image: url("../img/Masjid-3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -141,7 +141,7 @@ tr {
     background-color: #007320;
     padding-top: 5px;
     width: 30%;
-    height: 12%;
+    height: 15%;
     /* background-color: #007320; */
 }
 
@@ -160,7 +160,7 @@ tr {
     padding-bottom: 10px;
     width: 45%;
     height: auto;
-    opacity: 0.5;
+    opacity: 0.75;
     margin-bottom: 100px;
 }
 
@@ -200,6 +200,25 @@ tr {
     background-size: cover;
     background: linear-gradient(180deg, rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%);
     mix-blend-mode: normal;
+}
+
+@media screen and (max-width:400px){
+    .beranda1 h1{
+        width: 80%;
+        height:20%;
+        font-size: 1.8rem;
+    }
+}
+@media (min-width:401px) and (max-width:1024px){
+    .beranda1 h1{
+        width: 65%;
+        height: 20%;
+    }
+}
+@media (min-width:401px) and (max-width:1025px){
+    .beranda1 .home-info{
+        visibility: hidden;
+    }
 }
 
 
@@ -488,7 +507,7 @@ left: 200px; */
 .berandaInformasi1 {
     padding: auto;
     margin: auto;
-    background-image: url("../img/fotoinformasiSlide1.png");
+    background-image: url("../img/Masjid-5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -500,9 +519,27 @@ left: 200px; */
     font-family: "Mulish";
     background-color: #007320;
     padding-top: 5px;
-    width: 30%;
-    height: 12%;
+    width: 50%;
+    height: 25%;
     /* background-color: #007320; */
+}
+
+@media (max-width:400px){
+    .berandaInformasi1{
+        background-image: url("../img/Masjid-2.jpg");
+    }
+    .berandaInformasi1 h1{
+        width: 80%;
+    }
+}
+
+@media (min-width:401px) and (max-width:1025px){
+    .berandaInformasi1{
+        background-image: url("../img/Masjid-2.jpg");
+    }
+    .berandaInformasi1 h1{
+        width: 80%;
+    }
 }
 
 .berandaInformasi1 p {
@@ -515,7 +552,7 @@ left: 200px; */
     padding-bottom: 10px;
     width: 45%;
     height: auto;
-    opacity: 0.5;
+    opacity: 0.75;
     margin-bottom: 100px;
 }
 
