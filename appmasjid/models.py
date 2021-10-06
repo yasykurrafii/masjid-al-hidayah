@@ -91,7 +91,7 @@ class LayananModel(models.Model):
     link = models.CharField(default = "https://www.google.com", max_length=100)
 
     def __str__(self):
-        self.nama + ' | ' + str(self.no_telp)
+        return self.nama + ' | ' + str(self.no_telp)
 
 class JadwalJumatModel(models.Model):
     """Model definition for JadwalJumatModel."""
