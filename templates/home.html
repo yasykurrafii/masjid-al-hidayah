@@ -374,35 +374,18 @@
         <div class="col-md-12">
           <div class="row justify-content-center">
             <div class="d-flex justify-content-center containercardSlide4">
-              <div class="cardSlide4" style=" background: linear-gradient(180deg, rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%); mix-blend-mode: normal;">
-                <div class="imgBx">
-                  <img src="{% static 'img/fotoPemakamanSlide4.png' %}">
-                </div>
-                <div class="kontenSlide4" style="background: transparent;">
-                  <h4 style="color: white;">Pemakaman </h4>
-                  <p style="color: white;">Sigit Purnomo<br>08128561210</p>
-                </div>
-              </div>
               
-              <div class="cardSlide4" style=" background: linear-gradient(180deg, rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%); mix-blend-mode: normal;">
+              {% for data in layanan %}
+                <div class="cardSlide4" style=" background: linear-gradient(180deg, rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%); mix-blend-mode: normal;">
                 <div class="imgBx">
-                  <img src="{% static 'img/fotoYatimSlide4.png' %}">
+                  <img src="{{data.link}}">
                 </div>
                 <div class="kontenSlide4" style="background: transparent;">
-                  <h4 style="color: white;">Anak Yatim </h4>
-                  <p style="color: white;">Satibi Darwis H<br>085838380764</p>
+                  <h4 style="color: white;">{{data.nama}} </h4>
+                  <p style="color: white;">{{data.nama_pengurus}}<br>{{data.no_hp}}</p>
                 </div>
               </div>
-              
-              <div class="cardSlide4" style=" background: linear-gradient(180deg, rgba(82, 82, 82, 0) 45.51%, rgba(0, 0, 0, 0.7) 100%); mix-blend-mode: normal;">
-                <div class="imgBx">
-                  <img src="{% static 'img/fotoZakatSlide4.png' %}">
-                </div>
-                <div class="kontenSlide4" style="background: transparent;">
-                  <h4 style="color: white;">Zakat</h4>
-                  <p style="color: white;">Satibi Darwis H<br>085838380764</p>
-                </div>
-              </div>
+              {% endfor %}
               
             </div>
           </div>

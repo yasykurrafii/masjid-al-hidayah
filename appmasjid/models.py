@@ -15,11 +15,6 @@ class ImamModel(models.Model):
     def __str__(self):
         return self.nama
 
-class JenisShodaqoh(models.Model):
-    jenis = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.jenis
 
 class JadwalModel(models.Model):
     tanggal = models.DateTimeField(auto_now=False, auto_now_add=False)
@@ -37,19 +32,16 @@ class InfaqModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
     jumlah = models.IntegerField()
     nama = models.CharField(max_length=100)
+    link = models.CharField(default = "https://www.google.com", max_length=50)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama
 
 class ZakatModel(models.Model):
-    choices = (
-        ('Maal', 'Maal'),
-        ('Fitrah', 'Fitrah')
-    )
     tanggal = models.DateField(auto_now_add=False)
     nama = models.CharField(max_length=100)
     total = models.IntegerField()
-    jenis = models.CharField(choices=choices, max_length=10)
+    link = models.CharField(default = "https://www.google.com", max_length=50)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama + ' | ' + str(self.jenis)
@@ -58,7 +50,7 @@ class ShodaqohModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
     nama = models.CharField(max_length=100)
     total = models.IntegerField()
-    jenis = models.ForeignKey(JenisShodaqoh, on_delete=models.CASCADE)
+    link = models.CharField(default = "https://www.google.com", max_length=50)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama + ' | ' + str(self.jenis)
@@ -67,6 +59,7 @@ class DonasiModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
     jumlah = models.IntegerField()
     nama = models.CharField(max_length=100)
+    link = models.CharField(default = "https://www.google.com", max_length=50)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama
@@ -75,6 +68,7 @@ class WakafModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
     jumlah = models.IntegerField()
     nama = models.CharField(max_length=100)
+    link = models.CharField(default = "https://www.google.com", max_length=50)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama
@@ -92,7 +86,9 @@ class KegiatanModel(models.Model):
 
 class LayananModel(models.Model):
     nama = models.CharField(max_length=20)
+    nama_pengurus = models.CharField(max_length=50, default = 'Nama')
     no_telp = models.CharField(max_length=12)
+    link = models.CharField(default = "https://www.google.com", max_length=100)
 
     def __str__(self):
         self.nama + ' | ' + str(self.no_telp)

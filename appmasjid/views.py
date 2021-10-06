@@ -33,6 +33,7 @@ def index(request):
     wakaf = WakafModel.objects.aggregate(Sum('jumlah'))
     donasi = DonasiModel.objects.aggregate(Sum('jumlah'))
     shodaqoh = ShodaqohModel.objects.aggregate(Sum('total'))
+    layanan = LayananModel.objects.all()
     kegiatan = KegiatanModel.objects.all()
     jumat = JadwalJumatModel.objects.all()[:5]
     return render(request, 'home.html', {'date': now,
@@ -45,6 +46,7 @@ def index(request):
                                          'navhome' : 'active',
                                          'infaq': infaq,'zakat': zakat,'wakaf': wakaf,'donasi': donasi,'shodaqoh': shodaqoh,
                                          'kegiatan': kegiatan,
+                                         'layanan' : layanan,
                                          'jumat':jumat})
 
 
