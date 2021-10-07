@@ -88,7 +88,7 @@ class LayananModel(models.Model):
     nama = models.CharField(max_length=20)
     nama_pengurus = models.CharField(max_length=50, default = 'Nama')
     no_telp = models.CharField(max_length=12)
-    link = models.CharField(default = "https://www.google.com", max_length=100)
+    thumbnail = models.ImageField(upload_to='static/thumbnail_layanan/')
 
     def __str__(self):
         return self.nama + ' | ' + str(self.no_telp)
