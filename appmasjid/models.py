@@ -32,7 +32,7 @@ class InfaqModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
     jumlah = models.IntegerField()
     nama = models.CharField(max_length=100)
-    link = models.CharField(default = "https://www.google.com", max_length=50)
+    link = models.CharField(default = "https://www.google.com", max_length=1000)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama
@@ -41,7 +41,7 @@ class ZakatModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
     nama = models.CharField(max_length=100)
     total = models.IntegerField()
-    link = models.CharField(default = "https://www.google.com", max_length=50)
+    link = models.CharField(default = "https://www.google.com", max_length=1000)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama + ' | ' + str(self.jenis)
@@ -50,7 +50,7 @@ class ShodaqohModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
     nama = models.CharField(max_length=100)
     total = models.IntegerField()
-    link = models.CharField(default = "https://www.google.com", max_length=50)
+    link = models.CharField(default = "https://www.google.com", max_length=1000)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama + ' | ' + str(self.jenis)
@@ -59,7 +59,7 @@ class DonasiModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
     jumlah = models.IntegerField()
     nama = models.CharField(max_length=100)
-    link = models.CharField(default = "https://www.google.com", max_length=50)
+    link = models.CharField(default = "https://www.google.com", max_length=1000)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama
@@ -68,7 +68,7 @@ class WakafModel(models.Model):
     tanggal = models.DateField(auto_now_add=False)
     jumlah = models.IntegerField()
     nama = models.CharField(max_length=100)
-    link = models.CharField(default = "https://www.google.com", max_length=50)
+    link = models.CharField(default = "https://www.google.com", max_length=1000)
 
     def __str__(self):
         return str(self.tanggal) + ' | ' + self.nama

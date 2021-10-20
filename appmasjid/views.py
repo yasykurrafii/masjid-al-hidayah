@@ -27,7 +27,7 @@ def fetch_solat():
 def index(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
-    jadwal = JadwalModel.objects.all()[:5]
+    jadwal = JadwalModel.objects.all().order_by('-id')[:5]
     infaq = InfaqModel.objects.aggregate(Sum('jumlah'))
     zakat = ZakatModel.objects.aggregate(Sum('total'))
     wakaf = WakafModel.objects.aggregate(Sum('jumlah'))
@@ -35,7 +35,7 @@ def index(request):
     shodaqoh = ShodaqohModel.objects.aggregate(Sum('total'))
     layanan = LayananModel.objects.all()
     kegiatan = KegiatanModel.objects.all()
-    jumat = JadwalJumatModel.objects.all()[:5]
+    jumat = JadwalJumatModel.objects.all().order_by('-id')[:5]
     return render(request, 'home.html', {'date': now,
                                          'jadwal': jadwal,
                                          'subuh': solat['Fajr'],
