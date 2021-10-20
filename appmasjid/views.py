@@ -27,7 +27,7 @@ def fetch_solat():
 def index(request):
     solat = fetch_solat()
     solat = solat['results']['datetime'][0]['times']
-    jadwal = JadwalModel.objects.all()[:5]
+    jadwal = JadwalModel.objects.all().order_by('-id')[:5]
     infaq = InfaqModel.objects.aggregate(Sum('jumlah'))
     zakat = ZakatModel.objects.aggregate(Sum('total'))
     wakaf = WakafModel.objects.aggregate(Sum('jumlah'))
