@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'appmasjid'
+    'appmasjid',
+
+    'storages',
+
 ]
 
 MIDDLEWARE = [
@@ -130,6 +133,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+#S3 Buckets Config
+
+AWS_ACCESS_KEY_ID = "AKIAZOJXCEA4SKPGXI5V"
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'prisma-alhidayah'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backend.s3boto3.S3Boto3Storage'
 
 django_heroku.settings(locals())
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
