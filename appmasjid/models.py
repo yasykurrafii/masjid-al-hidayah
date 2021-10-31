@@ -10,7 +10,7 @@ class PenceramahModel(models.Model):
 
 class ImamModel(models.Model):
     nama = models.CharField(max_length=200)
-    foto = models.ImageField(upload_to='static/ustad/')
+    foto = models.ImageField(default='', null=True, blank=True)
 
     def __str__(self):
         return self.nama
@@ -77,7 +77,7 @@ class KegiatanModel(models.Model):
     kegiatan = models.CharField(max_length=200)
     tanggal_kegiatan = models.DateField(auto_now=False, auto_now_add=False)
     deskripsi = models.TextField()
-    thumbnail = models.ImageField(upload_to='static/thumbnail/')
+    thumbnail = models.ImageField(default='', null=True, blank=True)
     link = models.CharField(max_length=500, default='https://www.google.com/')
     upload = models.DateField(auto_now=True, editable=False)
 
@@ -88,7 +88,7 @@ class LayananModel(models.Model):
     nama = models.CharField(max_length=20)
     nama_pengurus = models.CharField(max_length=50, default = 'Nama')
     no_telp = models.CharField(max_length=12)
-    thumbnail = models.ImageField(upload_to='static/thumbnail_layanan/', default = "")
+    thumbnail = models.ImageField(default='', null=True, blank=True)
 
     def __str__(self):
         return self.nama + ' | ' + str(self.no_telp)
