@@ -101,6 +101,7 @@ class JadwalJumatModel(models.Model):
     khatib = models.CharField( max_length=100)
     imam = models.CharField( max_length=100)
     muadzin = models.CharField( max_length=100)
+    tema = models.CharField(max_length=100, default='-')
     class Meta:
         """Meta definition for JadwalJumatModel."""
 
