@@ -92,8 +92,8 @@ class KegiatanModel(models.Model):
             return "#"
 
 class LayananModel(models.Model):
-    nama = models.CharField(max_length=20)
-    nama_pengurus = models.CharField(max_length=50, default = 'Nama')
+    nama = models.CharField(max_length=100)
+    nama_pengurus = models.CharField(max_length=100, default = 'Nama')
     no_telp = models.CharField(max_length=12)
     thumbnail = models.ImageField(default='', null=True, blank=True)
 
