@@ -86,8 +86,8 @@ class KegiatanModel(models.Model):
 
     @property
     def get_photo_url(self):
-        if self.photo and hasattr(self.photo, 'url'):
-            return self.photo.url
+        if self.thumbnail and hasattr(self.thumbnail, 'url'):
+            return self.thumbnail.url
         else:
             return "#"
 
@@ -102,8 +102,8 @@ class LayananModel(models.Model):
 
     @property
     def get_photo_url(self):
-        if self.photo and hasattr(self.photo, 'url'):
-            return self.photo.url
+        if self.thumbnail and hasattr(self.thumbnail, 'url'):
+            return self.thumbnail.url
         else:
             return "#"
 
