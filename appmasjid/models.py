@@ -84,6 +84,13 @@ class KegiatanModel(models.Model):
     def __str__(self):
         return self.kegiatan  + ' | uploaded: ' + str(self.upload)
 
+    @property
+    def get_photo_url(self):
+        if self.photo and hasattr(self.photo, 'url'):
+            return self.photo.url
+        else:
+            return "#"
+
 class LayananModel(models.Model):
     nama = models.CharField(max_length=20)
     nama_pengurus = models.CharField(max_length=50, default = 'Nama')
@@ -92,6 +99,13 @@ class LayananModel(models.Model):
 
     def __str__(self):
         return self.nama + ' | ' + str(self.no_telp)
+
+    @property
+    def get_photo_url(self):
+        if self.photo and hasattr(self.photo, 'url'):
+            return self.photo.url
+        else:
+            return "#"
 
 class JadwalJumatModel(models.Model):
     """Model definition for JadwalJumatModel."""
